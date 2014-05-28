@@ -20,8 +20,11 @@
     "packages": "0.0.x",
     "paperclip": "0.3.x",
     "mojo-router": "0.2.x",
-    "bindable": "^0.5.37",
-    "protoclass": "0.0.5"
+    "bindable": "0.5.x",
+    "protoclass": "0.0.5",
+    "browserify-middleware": "3.0.x",
+    "express": "4.3.x",
+    "through": "2.3.x"
   },
   "devDependencies": {
     "expect.js": "0.3.1",
