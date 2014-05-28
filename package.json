@@ -1,0 +1,30 @@
+{
+  "name": "mojo-docs",
+  "version": "0.0.0",
+  "description": "mojo-docs =========",
+  "scripts": {
+    "start": "node ./lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/classdojo/mojo-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classdojo/mojo-docs/issues"
+  },
+  "homepage": "https://github.com/classdojo/mojo-docs",
+  "dependencies": {
+    "mojojs": "0.8.x",
+    "packages": "0.0.x",
+    "paperclip": "0.3.x",
+    "mojo-router": "0.2.x",
+    "bindable": "^0.5.37",
+    "protoclass": "0.0.5"
+  },
+  "devDependencies": {
+    "expect.js": "0.3.1",
+    "mocha": "1.20.0"
+  }
+}
