@@ -24,7 +24,8 @@
     "protoclass": "0.0.5",
     "browserify-middleware": "3.0.x",
     "express": "4.3.x",
-    "through": "2.3.x"
+    "through": "2.3.x",
+    "glob": "4.0.0"
   },
   "devDependencies": {
     "expect.js": "0.3.1",
