@@ -1,5 +1,6 @@
 {
   "title": "Mojo.js Installation",
   "tags": ["framework", "mojo", "installation"],
-  "category": "framework"
+  "category": "framework",
+  "main": "./js/test.pc"
 }

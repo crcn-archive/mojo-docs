@@ -1,1 +1,3 @@
 ## {{ article.title }}
+
+{{ html: article.script }}
