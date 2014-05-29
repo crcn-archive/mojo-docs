@@ -38,7 +38,9 @@
     "sift": "0.0.16",
     "marked": "0.3.2",
     "titlecase": "1.0.2",
-    "browserify": "4.1.6"
+    "browserify": "4.1.6",
+    "github-markdown": "^0.3.1",
+    "highlight.js": "^8.0.0"
   },
   "devDependencies": {
     "expect.js": "0.3.1",

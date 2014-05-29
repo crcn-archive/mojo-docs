@@ -1,4 +1,5 @@
 {
   "title": "Introduction",
-  "tags": ["paperclip", "introduction", "template"]
+  "tags": ["paperclip", "introduction", "template"],
+  "main": "./article.md"
 }
