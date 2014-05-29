@@ -1,0 +1,6 @@
+{
+  "title": "Introduction",
+  "tags": ["view", "controller", "introduction"],
+  "category": "views",
+  "main": "./article.md"
+}

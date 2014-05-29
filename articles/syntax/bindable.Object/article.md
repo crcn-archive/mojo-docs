@@ -6,15 +6,6 @@ Two-way data binding means linking properties of two separate objects - when one
 Bindable.js is similar to Ember's data-binding system, except it doesn't include anything View related, so the library has many use-cases - whether replacing Backbone's Model, providing a way to maintain the state between server <-> client for a realtime front-end application (similar to Firebase), or perhaps a way to communicate between server <-> server for a realtime distributed Node.js application.
 
 
-### Projects using bindable.js
-
-- [Paperclip.js](https://github.com/classdojo/paperclip.js) - data-bindable templating engine.
-- [Sherpa.js](https://github.com/classdojo/sherpa.js) - online tours library
-- [Mojo.js](https://github.com/classdojo/mojo.js) - javascript MVC framework.
-- [AWSM](https://github.com/crcn/node-awsm) - aws library.
-- [ditto](https://github.com/browsertap/ditto.js) - synchronized user interactions across browsers.
-
-
 ### BindableObject Example
 
 ```javascript

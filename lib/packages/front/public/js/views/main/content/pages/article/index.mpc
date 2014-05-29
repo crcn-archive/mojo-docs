@@ -1,4 +1,4 @@
-# {{ article.title }}
+## {{article.category | titlecase() }} &#65515; {{ article.title }}
 
 <br />
 
