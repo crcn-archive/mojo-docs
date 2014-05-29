@@ -34,7 +34,8 @@
     "outcome": "0.0.18",
     "comerr": "0.0.6",
     "async": "^0.9.0",
-    "vine": "^0.1.1"
+    "vine": "^0.1.1",
+    "sift": "0.0.16"
   },
   "devDependencies": {
     "expect.js": "0.3.1",

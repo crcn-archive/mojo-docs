@@ -1,0 +1,4 @@
+<ul>
+  {{ html: ~sections.categories }}
+</ul>
+

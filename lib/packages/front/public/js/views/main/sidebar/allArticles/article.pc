@@ -1,0 +1,4 @@
+<li class="article-list-item">
+  <a data-href="article">{{~article.title}}</a>
+  <span>{{~article.category}}</span>
+</li>

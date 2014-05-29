@@ -2,6 +2,6 @@
   <h3><a data-href="home">Mojo.js Docs</a></h3>
   <div id="search-box" class="left-inner-addon">
     <i class="glyphicon glyphicon-search search-icon"></i>
-    <input type="text" placeholder="Search..." class="form-control" data-bind="{{ model: <~>keyword, onKeyUp: search() }}"></input>
+    <input type="text" placeholder="Search..." class="form-control" data-bind="{{ model: <~>models.filters.keyword, onKeyUp: search() }}"></input>
   </div>
 </div>

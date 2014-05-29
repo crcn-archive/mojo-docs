@@ -1,4 +1,10 @@
 <div id="sidebar" class="col-xs-3">
-  {{ html: ~sections.search   }}
-  {{ html: ~sections.articles }}
+  {{ html: articles.categories  }}
+
+  {{ html: ~sections.search     }}
+  {{#if: models.filters.keyword }}
+    {{ html: ~sections.allArticles }}
+  {{/else}}
+    {{ html: ~sections.categories }}
+  {{/}}
 </div>
