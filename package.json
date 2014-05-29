@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "mojo-docs =========",
   "scripts": {
-    "start": "node ./lib/index.js"
+    "start": "node ./lib/index.js",
+    "hotswap": "./node_modules/.bin/ditto-proxy http://127.0.0.1:8081 --port=8090 --verbose --watch='./lib/packages/front/public/**'"
   },
   "repository": {
     "type": "git",
@@ -25,10 +26,14 @@
     "browserify-middleware": "3.0.x",
     "express": "4.3.x",
     "through": "2.3.x",
-    "glob": "4.0.0"
+    "glob": "4.0.0",
+    "mojo-mediator": "0.0.4",
+    "less": "1.7.x",
+    "lodash": "2.4.x"
   },
   "devDependencies": {
     "expect.js": "0.3.1",
-    "mocha": "1.20.0"
+    "mocha": "1.20.0",
+    "ditto": "0.0.11"
   }
 }

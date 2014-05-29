@@ -1,0 +1,4 @@
+<div id="sidebar" class="col-xs-3">
+  {{ html: ~sections.search   }}
+  {{ html: ~sections.articles }}
+</div>

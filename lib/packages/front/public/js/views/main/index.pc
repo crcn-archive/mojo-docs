@@ -1,0 +1,4 @@
+<div class="row application-row">
+  {{ html: ~sections.sidebar }}
+  {{ html: ~sections.content }}
+</div>

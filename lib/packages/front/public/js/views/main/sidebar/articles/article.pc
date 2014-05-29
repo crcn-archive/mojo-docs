@@ -1,0 +1,3 @@
+<li class="article-list-item">
+  <a href="#">{{article.title}}</a>
+</li>
