@@ -30,12 +30,13 @@
     "mojo-mediator": "0.0.4",
     "less": "1.7.x",
     "lodash": "2.4.x",
-    "superagent": "^0.18.0",
+    "superagent": "0.18.0",
     "outcome": "0.0.18",
     "comerr": "0.0.6",
     "async": "^0.9.0",
     "vine": "^0.1.1",
-    "sift": "0.0.16"
+    "sift": "0.0.16",
+    "marked": "0.3.2"
   },
   "devDependencies": {
     "expect.js": "0.3.1",
