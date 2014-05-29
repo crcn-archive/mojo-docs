@@ -1,5 +1,3 @@
-# Paperclip.js [![Alt ci](https://travis-ci.org/classdojo/paperclip.js.png)](https://travis-ci.org/classdojo/paperclip.js)
-
 Paperclip is a fast, data-bindable templating system inspired by [Mustache](https://github.com/janl/mustache.js/), [Angular](http://angularjs.org/), [Derby](http://derbyjs.com/), and [Knockout](http://knockoutjs.com/). It's supported on all major platforms: `IE8+`, `Firefox`, `Chrome`, `Safari`, `Opera`, as well as `Node.js`.
 
 Paperclip works by listening to [bindable](https://github.com/classdojo/bindable.js) objects, and updating the template if anything changes. This means that paperclip uses very few operations in order to manipulate the DOM. 
