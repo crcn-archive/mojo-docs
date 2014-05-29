@@ -20,7 +20,8 @@
     "on",
     "emit",
     "once",
-    "dispose"
+    "dispose",
+    "events"
   ],
   "category": "syntax",
   "main": "./article.md"
