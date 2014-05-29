@@ -1,4 +1,4 @@
-<ul id="article-list">
+<ul class="article-list">
   {{ html: ~sections.articles }}
 </ul>
 
