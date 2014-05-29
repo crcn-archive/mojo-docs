@@ -1,6 +1,27 @@
 {
   "title": "bindable objects",
-  "tags": ["bindable", "bind", "object"],
+  "tags": [
+    "bindable", 
+    "bind", 
+    "object", 
+    "computed", 
+    "properties", 
+    "now", 
+    "@each",
+    "bothWays", 
+    "to", 
+    "target", 
+    "map",
+    "get",
+    "set",
+    "setProperties",
+    "has",
+    "context",
+    "on",
+    "emit",
+    "once",
+    "dispose"
+  ],
   "category": "syntax",
   "main": "./article.md"
 }
