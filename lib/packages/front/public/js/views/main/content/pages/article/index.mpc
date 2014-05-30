@@ -1,5 +1,9 @@
 ## {{article.category | titlecase() }} &#65515; {{ article.title }}
 
+{{#if:article.category == "examples"}}
+  <a href="http://github.com/classdojo/mojo-docs/tree/master/lib/{{article.path}}">View Source</a>
+{{/}}
+
 <br />
 
 {{ html: article.script }}
