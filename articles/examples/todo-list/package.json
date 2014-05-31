@@ -1,0 +1,6 @@
+{
+  "title": "todo list",
+  "category": "examples",
+  "type": "example",
+  "main": "./js/index.js"
+}

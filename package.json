@@ -1,50 +1,15 @@
 {
   "name": "mojo-docs",
-  "version": "0.0.0",
-  "description": "mojo-docs =========",
+  "version": "0.0.1",
+  "private": "true",
   "scripts": {
-    "start": "node ./lib/index.js",
-    "hotswap": "./node_modules/.bin/ditto-proxy http://127.0.0.1:8081 --port=8090 --verbose --watch='./lib/**'"
+    "start": "./node_modules/.bin/delicorice"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/classdojo/mojo-docs.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/classdojo/mojo-docs/issues"
-  },
-  "homepage": "https://github.com/classdojo/mojo-docs",
   "dependencies": {
-    "mojojs": "0.8.x",
-    "packages": "0.0.x",
-    "paperclip": "0.3.x",
-    "mojo-router": "0.2.x",
-    "bindable": "0.5.x",
-    "protoclass": "0.0.5",
-    "browserify-middleware": "3.0.x",
-    "express": "4.3.x",
-    "through": "2.3.x",
-    "glob": "4.0.0",
-    "mojo-mediator": "0.0.4",
-    "less": "1.7.x",
-    "lodash": "2.4.x",
-    "superagent": "0.18.0",
-    "outcome": "0.0.18",
-    "comerr": "0.0.6",
-    "async": "0.9.0",
-    "vine": "0.1.1",
-    "sift": "0.0.16",
-    "marked": "0.3.2",
-    "titlecase": "1.0.2",
-    "browserify": "4.1.6",
-    "github-markdown": "^0.3.1",
-    "highlight.js": "^8.0.0"
-  },
-  "devDependencies": {
-    "expect.js": "0.3.1",
-    "mocha": "1.20.0",
-    "ditto": "0.0.11"
+    "delicorice": "0.0.8"
   }
 }
