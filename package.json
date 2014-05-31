@@ -10,6 +10,6 @@
     "url": "https://github.com/classdojo/mojo-docs.git"
   },
   "dependencies": {
-    "delicorice": "0.0.15"
+    "delicorice": "0.0.16"
   }
 }
