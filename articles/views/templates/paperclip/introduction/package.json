@@ -1,6 +1,6 @@
 {
   "title": "Paperclip Introduction",
   "tags": ["paperclip", "introduction", "template"],
-  "category": "templates",
+  "category": "views",
   "main": "./article.md"
 }
