@@ -1,8 +1,8 @@
 Paperclip is a fast, data-bindable templating system inspired by [Mustache](https://github.com/janl/mustache.js/), [Angular](http://angularjs.org/), [Derby](http://derbyjs.com/), and [Knockout](http://knockoutjs.com/). It's supported on all major platforms: `IE8+`, `Firefox`, `Chrome`, `Safari`, `Opera`, as well as `Node.js`.
 
-Paperclip works by listening to [bindable](https://github.com/classdojo/bindable.js) objects, and updating the template if anything changes. This means that paperclip uses very few operations in order to manipulate the DOM. 
+Paperclip works by listening to [bindable](https://github.com/classdojo/bindable.js) objects, and updating the template if anything changes. This means that paperclip uses very few operations in order to manipulate the DOM.
 
-Paperclip first translates HTML directly to JavaScript. At the same time, the parser also marks any data-bindings that it runs into. Paperclip then creates an element from the template, and then runs the browser's native `cloneNode()` method each time the template is needed. [This turns out to be very fast](http://jsfiddle.net/JTxdM/65/). 
+Paperclip first translates HTML directly to JavaScript. At the same time, the parser also marks any data-bindings that it runs into. Paperclip then creates an element from the template, and then runs the browser's native `cloneNode()` method each time the template is needed. [This turns out to be very fast](http://jsfiddle.net/JTxdM/65/).
 
 
 Paperclip translates HTML directly to JavaScript. For example, the following `hello.pc` file:
@@ -229,10 +229,10 @@ You can also reference `message` directly. [For example](http://jsfiddle.net/JTx
 
 
 ```html
-<input type="text" data-bind="{{ model: <=>message }}"></input> {{ message }}
+<input type="text" data-bind="{{ model: <~>message }}"></input> {{ message }}
 ```
 
-Notice the `<=>` operator. This tells paperclip to bind both ways. See [binding operators](#binding-operators).
+Notice the `<~>` operator. This tells paperclip to bind both ways. See [binding operators](#binding-operators).
 
 
 #### {{ event: expression }}
@@ -255,7 +255,7 @@ Executed when an event is fired on the DOM element. Here are all the available e
 [Basic example](http://jsfiddle.net/JTxdM/77/):
 
 ```html
-<input type="text" data-bind="{{ model: <=>name, onEnter: sayHello() }}"></input>
+<input type="text" data-bind="{{ model: <~>name, onEnter: sayHello() }}"></input>
 ```
 
 
