@@ -11,6 +11,8 @@ var HelloView = mojo.View.extend({
   name: "World"
 });
 
+
+// create the view, and add to the DOM
 var v = new HelloView();
 $("#application").append(v.render());
 ```
@@ -39,7 +41,12 @@ var HelloView = mojo.View.extend({
   paper: require("./hello.pc")
 });
 
-var v = new HelloView({ person: new bindable.Object({ name: "Jeff" }) });
+
+// create the view with the person model, and add to the DOM
+var v = new HelloView({ 
+  person: new bindable.Object({ name: "Jeff" }) 
+});
+
 $("#application").append(v.render());
 ```
 
