@@ -31,18 +31,6 @@ Notice `refs` in the data-binding. This effectively tells paperclip exactly whic
 each DOM element, so there's no use of innerHTML, or any other operations that might re-create the template. This means you can use additional third-party libraries such as
 `jQuery` without worrying that any attached behavior might be removed after a user interaction.
 
-### Features
-
-- template update automatically if the data changes
-- write javascript expressions directly inline. Just like Angular.js.
-- [block helpers](#block-helpers)
-- [data-bind attributes](#data-bind-attributes) (similar to knockout.js)
-- [declarative data-binding](#blocks), similar to angular.js
-- node.js support
-- [block modifiers](#modifiers), similar to angular filters
-- [pollyfills](#pollyfills), similar to angular directives
-- [full control over data-bindings](#binding-operators)
-
 ### Examples
 
 - [hello input](http://jsfiddle.net/JTxdM/67/)
@@ -63,22 +51,7 @@ each DOM element, so there's no use of innerHTML, or any other operations that m
 - [list benchmark](http://jsfiddle.net/JTxdM/65/) - 10k items
 - [dots benchmark](http://jsfiddle.net/JTxdM/62/)
 
-### Third-party components:
 
-- [paperclip-component](https://github.com/classdojo/paperclip-component) - used with [Mojo.js](https://github.com/classdojo/mojo.js). Allows for views to be instantiated within paperclip templates. This is similar to Ember.js's component, and Angular.js's directive implementation.
-- [paperclip-placeholder-pollyfill](https://github.com/classdojo/paperclip-placeholder-pollyfill) - placeholder pollyfull for IE users.
-
-### Installation
-
-```bash
-npm install paperclip -g
-```
-
-### Compiling a script
-
-```bash
-paperclip -i template.pc -o template.pc.js
-```
 
 ## Syntax
 
@@ -185,8 +158,6 @@ Similar to escaping content in mustache (`{{{content}}}`). [For example](http://
 {{ html: content }}
 ```
 
-
-
 #### {{#if: condition }}
 
 Conditional block helper. [For example](http://jsfiddle.net/JTxdM/75/):
@@ -200,13 +171,6 @@ Conditional block helper. [For example](http://jsfiddle.net/JTxdM/75/):
   final condition
 {{/}}
 ```
-
-
-#### Custom Block Helpers
-
-Paperclip also allows you to register your own block helpers. This is similar to custom angular.js directives.
-
-TODO example
 
 ### data-bind attributes
 
@@ -291,14 +255,6 @@ Sets the style of a given element. [For example](http://jsfiddle.net/JTxdM/78/):
 
 Toggles the enabled state of an element.
 
-#### Custom data-bind helpers
-
-TODO
-
-### Pollyfills
-
-Pollyfills are similar to angular directives, but they should only be used to provide support for features not implemented in older browsers. A good example of this is [paperclip-placeholder-pollyfill](https://github.com/classdojo/paperclip-placeholder-pollyfill). If you need to create a custom component, [create as a block helper](#custom-block-helpers).
-
 ## API
 
 #### template paperclip.template(sourceOrScriptName)
@@ -317,20 +273,9 @@ Casts the elements as a document fragment.
 
 Unbinds the elements from the given context.
 
-## Node.js Usage
+## Mojo.js Usage
 
-You can easily run paperclip in node. All you need to do is swap out the DOM factory.
+TODO
 
 ```javascript
-var paperclip = require("paperclip"),
-nofactor      = require("nofactor"),
-bindable      = require("bindable");
-
-var template = paperclip.template("<h1>Hello {{name}}</h1>", { nodeFactory: nofactor.string });
-
-var element = template.bind(new bindable.Object({ name: "Jon" })).render();
-
-console.log(renderer.toString());
 ```
-
-Here's an example: http://runnable.com/UwVueJLcL9ZTAABN/hello-paperclip-for-node-js
