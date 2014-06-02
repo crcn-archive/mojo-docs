@@ -1,11 +1,14 @@
-Paperclip is a fast, data-bindable templating system inspired by [Mustache](https://github.com/janl/mustache.js/), [Angular](http://angularjs.org/), [Derby](http://derbyjs.com/), and [Knockout](http://knockoutjs.com/). It's supported on all major platforms: `IE8+`, `Firefox`, `Chrome`, `Safari`, `Opera`, as well as `Node.js`.
+Paperclip is the preferred template engine for Mojo.js. However, any other template system can be used with the framework, including htmlbars, mustache, jade, and even angularjs.
 
-Paperclip works by listening to [bindable](https://github.com/classdojo/bindable.js) objects, and updating the template if anything changes. This means that paperclip uses very few operations in order to manipulate the DOM.
+Templates Provide the *view* in *MVC* - they're simply used to display information to the user, and relay user-interactions back to the main application.
 
-Paperclip first translates HTML directly to JavaScript. At the same time, the parser also marks any data-bindings that it runs into. Paperclip then creates an element from the template, and then runs the browser's native `cloneNode()` method each time the template is needed. [This turns out to be very fast](http://jsfiddle.net/JTxdM/65/).
+Templates should be encapsulated. The only thing that should interact with templates is the view controller, so theoretically, you should have a functional application that
+runs without the view, or information displayed to the user. This makes Unit Tests, and TDD possible.
 
+Paperclip works by listening to the view controller, and updating the template if anything changes. This means that paperclip uses very few operations in order to manipulate the DOM.
 
-Paperclip translates HTML directly to JavaScript. For example, the following `hello.pc` file:
+Paperclip first translates HTML directly to JavaScript. At the same time, the parser also marks any data-bindings that it runs into. Paperclip then creates an element from the template, and then runs the browser's native `cloneNode()` method each time
+the template is needed. Here's an example `hello` template:
 
 ```html
 hello {{name}}!
@@ -25,14 +28,6 @@ module.exports = function(fragment, block, element, text, textBlock, parser, mod
     }, void 0), text("! ") ]);
 };
 ```
-
-
-This means a few things:
-
-- Super fast. [10k list items in ~ 500 MS](http://jsfiddle.net/JTxdM/65/).
-- Works very well on older browsers such as IE8.
-- You can customize paperclip to generate your own sort of markup language.
-- No metamorph tags, or other things that pollute the DOM, and cause strange bugs.
 
 
 ### Features
