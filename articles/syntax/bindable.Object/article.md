@@ -1,5 +1,5 @@
 
-Incredibly flexible, fast bi-directional data binding library. 
+Incredibly flexible, fast bi-directional data binding library.
 
 Two-way data binding means linking properties of two separate objects - when one changes, the other will automatically update with that change.  It enables much easier interactions between data models and UIs, among other uses outside of MVC.
 
@@ -24,7 +24,7 @@ person.bind("location.zip", function(value) {
 }).now();
 
 //triggers the binding
-person.set("location.zip", "94102"); 
+person.set("location.zip", "94102");
 
 //bind location.zip to another property in the model, and do it only once
 person.bind("location.zip", { to: "zip", max: 1 }).now();
@@ -183,16 +183,21 @@ obj.bind("name", { to: "name2", map: function (name) {
 
 #### binding.now()
 
-Executes a binding now
+Triggers the binding immediately if the bound property is defined. This is useful if you want to bind
+two properties together, for instance:
 
 ```javascript
-var person = new bindable.Object({ name: "jeff" });
-person.bind("name", function (name) {
-  // called ~ name = jeff
-}).now();
+var person = new bindable.Object({ firstName: "jeff", lastName: "anderson" });
 
-// above is triggered
-person.set("name", "joe");
+// triggers immediately, and computes first & last name into full name
+person.bind("firstName, lastName", to: "fullName", map: function (firstName, lastName) {
+  return firstName + " " + lastName;
+}}).now();
+
+console.log(person.get("fullName")); // jeff anderson
+person.set("firstName", "liam"); // re-computes data-binding
+console.log(person.get("fullName")); // liam anderson
+
 ```
 
 #### binding.dispose()
