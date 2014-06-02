@@ -21,6 +21,8 @@ $("#application").append(v.render());
 hello {{name}}!
 ```
 
+TODO - jsfiddle
+
 Notice that the `context` of the paperclip template is the view controller itself. 
 
 ## Working with Models
