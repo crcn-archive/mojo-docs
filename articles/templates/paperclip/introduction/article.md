@@ -255,27 +255,8 @@ Sets the style of a given element. [For example](http://jsfiddle.net/JTxdM/78/):
 
 Toggles the enabled state of an element.
 
-## API
-
-#### template paperclip.template(sourceOrScriptName)
-
-translates the source, or script into a paperclip template. [For example](http://jsfiddle.net/JTxdM/83/).
-
-#### elements template.bind(context)
-
-Creates the DOM elements, and binds the elements to the given context.
-
-#### elements.toFragment()
-
-Casts the elements as a document fragment.
-
-#### elements.unbind()
-
-Unbinds the elements from the given context.
-
 ## Mojo.js Usage
 
-TODO
 
 ```javascript
 ```
