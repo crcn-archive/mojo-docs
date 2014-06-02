@@ -27,8 +27,8 @@ module.exports = function(fragment, block, element, text, textBlock, parser, mod
 };
 ```
 
-Notice `refs` in the data-binding. This effectively tells paperclip exactly which DOM elements to data-bind to. Once a template is created, paperclip keeps track of
-each DOM element, so there's no use of innerHTML, or any other operations that might re-create the template. This means you can use additional third-party libraries such as
+Notice `refs` in the data-binding. This effectively tells paperclip exactly which DOM elements to data-bind to. Once an element is created, paperclip keeps track of
+each data-binding, so there's no use of innerHTML, or any other operations that might re-create the element. This means you can use additional third-party libraries such as
 `jQuery` without worrying that any attached behavior might be removed after a user interaction.
 
 ### Examples
