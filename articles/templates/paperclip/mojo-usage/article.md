@@ -58,6 +58,10 @@ $("#application").append(v.render());
 hello {{person.name}}
 ```
 
+## Computed Properties
+
+TODO
+
 ## Property Scope
 
 templates are able to inherit properties from parent view controllers. For example:
