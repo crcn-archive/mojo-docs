@@ -11,42 +11,6 @@ The Mojo.js router gives your application HTTP navigation.
 
 - Node.js support
 
-### Installation
-
-Within your mojo.js application:
-
-```
-npm install mojo-router
-```
-
-### Example
-
-In your main application, register it:
-
-```javascript
-var app = new mojo.Application();
-app.use(require("mojo-router"));
-app.use(require("./routes")); // your application specific routes
-```
-
-Then define some routes:
-
-```javascript
-module.exports = function (app) {
-  app.router.add({
-    "/home": {
-      states: {
-        main: "home"
-      }
-    },
-    "/contact": {
-      states: {
-        main: "contact"
-      }
-    }
-  })
-};
-```
 
 #### Entering Routes
 
