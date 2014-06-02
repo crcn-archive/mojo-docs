@@ -23,11 +23,10 @@ $("#application").append(v.render());
 hello {{name}}!
 ```
 
-Here's what you get:
+Notice that the `context` of the paperclip template is the view controller itself. Here's what you get:
 
 <iframe width="100%" height="300" src="http://jsfiddle.net/BZA8K/110/embedded/result,js,html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Notice that the `context` of the paperclip template is the view controller itself. 
 
 ## Working with Models
 
