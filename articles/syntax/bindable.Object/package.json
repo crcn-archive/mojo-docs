@@ -1,5 +1,7 @@
 {
+  "_id": "bindable-objects",
   "title": "bindable objects",
+  "related": ["bindable-collections"],
   "tags": [
     "bindable", 
     "bind", 

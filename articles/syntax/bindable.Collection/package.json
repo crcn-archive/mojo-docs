@@ -1,6 +1,8 @@
 {
+  "_id": "bindable-collections",
   "title": "bindable collections",
   "tags": ["bindable", "bind", "object"],
+  "related": ["bindable-objects"],
   "category": "syntax",
   "main": "./article.md"
 }

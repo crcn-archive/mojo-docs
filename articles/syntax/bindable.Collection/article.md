@@ -61,7 +61,6 @@ removes an item at the begging of a collection
 
 ## Computed Properties
 
-TODO
 
 
 
