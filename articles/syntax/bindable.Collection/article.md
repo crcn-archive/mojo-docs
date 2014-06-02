@@ -3,13 +3,6 @@ used quite a bit in Mojo views, especially lists.
 
 ## API
 
-#### collection.push(item)
-
-adds an item to the collection
-
-```javasript
-
-
 #### object collection.at(index)
 
 returns an item at the given index
