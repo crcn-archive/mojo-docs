@@ -3,11 +3,9 @@ Paperclip is the preferred template engine for Mojo.js. However, any other templ
 Templates Provide the *view* in *MVC* - they're simply used to display information to the user, and relay user-interactions back to the main application.
 
 Templates should be encapsulated. The only thing that should interact with templates is the view controller, so theoretically, you should have a functional application that
-runs without the view, or information displayed to the user. This makes Unit Tests, and TDD possible.
+runs without the view, or information displayed to the user. This makes Unit Tests, and TDD much easier, and more effective.
 
-Paperclip works by listening to the view controller, and updating the template if anything changes. This means that paperclip uses very few operations in order to manipulate the DOM.
-
-Paperclip first translates HTML directly to JavaScript. At the same time, the parser also marks any data-bindings that it runs into. Paperclip then creates an element from the template, and then runs the browser's native `cloneNode()` method each time
+Paperclip works by listening to the view controller, and updating the template if anything changes. Paperclip first translates HTML directly to JavaScript. At the same time, the parser also marks any data-bindings that it runs into. Paperclip then creates an element from the template, and then runs the browser's native `cloneNode()` method each time
 the template is needed. Here's an example `hello` template:
 
 ```html
@@ -29,6 +27,9 @@ module.exports = function(fragment, block, element, text, textBlock, parser, mod
 };
 ```
 
+Notice `refs` in the data-binding. This effectively tells paperclip exactly which DOM elements to data-bind to. Once a template is created, paperclip keeps track of
+each DOM element, so there's no use of innerHTML, or any other operations that might re-create the template. This means you can use additional third-party libraries such as
+`jQuery` without worrying that any attached behavior might be removed after a user interaction.
 
 ### Features
 
