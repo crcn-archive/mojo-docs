@@ -22,22 +22,3 @@ test/
     views/
     models/
 ```
-
-
-## Testing Views & Templates
-
-```javascript
-```
-
-## Testing Models
-
-```javascript
-
-```
-
-## Testing Routes
-
-
-```javascript
-
-```
