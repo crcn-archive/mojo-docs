@@ -51,8 +51,6 @@ each data-binding, so there's no use of innerHTML, or any other operations that 
 - [list benchmark](http://jsfiddle.net/JTxdM/65/) - 10k items
 - [dots benchmark](http://jsfiddle.net/JTxdM/62/)
 
-
-
 ## Syntax
 
 Paperclip takes on a mustache / handlebars approach with variables, blocks, and pollyfills. Paperclip also allows basic inline javascript, similar to angular.js.
@@ -254,9 +252,3 @@ Sets the style of a given element. [For example](http://jsfiddle.net/JTxdM/78/):
 #### {{ disable: bool }}
 
 Toggles the enabled state of an element.
-
-## Mojo.js Usage
-
-
-```javascript
-```
