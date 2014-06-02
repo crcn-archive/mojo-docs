@@ -1,4 +1,4 @@
-The Mojo.js router gives your application HTTP navigation.
+Kubrik is an HTTP router which helps maintain application state. 
 
 ### Features
 
