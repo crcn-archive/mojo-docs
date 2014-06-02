@@ -1,8 +1,24 @@
+File Structure:
+
+```
+test/
+  e2e/
+    stories/
+  unit/
+    routes/
+    views/
+    models/
+```
+
 ## Test Helpers
+
+TODO
 
 ## Testing Routes
 
-TODO
+```javascript
+
+```
 
 ## Testing Views
 
@@ -13,4 +29,3 @@ TODO
 TODO
 
 ## Testing Models
-
