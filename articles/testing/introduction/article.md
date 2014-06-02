@@ -1,5 +1,4 @@
-Writing tests with Mojo is incredibly simple due to the modular, and encapsulated nature of the framework. Tests
-are generally don't have knowledge of the platform they're running on, so you can easily run everything within Node.js, the browser, or any
+Tests generally don't have knowledge of the platform they're running on, so you can easily run everything within Node.js, the browser, or any
 other JavaScript supported platform.
 
 Unit Tests are preferable over e2e tests for a number of reasons:

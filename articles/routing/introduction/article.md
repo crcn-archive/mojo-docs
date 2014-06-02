@@ -1,3 +1,4 @@
+The Mojo.js router gives your application HTTP navigation.
 
 ### Features
 
@@ -6,36 +7,45 @@
 - nested routes
 - naming routes
 
+### TODO
+
+- Node.js support
+
+### Installation
+
+Within your mojo.js application:
+
+```
+npm install mojo-router
+```
+
 ### Example
 
+In your main application, register it:
+
 ```javascript
-var router = require("kubrick")();
+var app = new mojo.Application();
+app.use(require("mojo-router"));
+app.use(require("./routes")); // your application specific routes
+```
 
-function auth (location, next) {
-  // authenticate here
-}
+Then define some routes:
 
-router.param("classroom", function (location, next) {
-  // load classroom
-  next(null, classroom);
-});  
-
-router.add({
-  enter: auth,
-  "/classes/:classroom": {
-    "/reports": {
-      enter: function (location, next) {
-        // do stuff with route
+```javascript
+module.exports = function (app) {
+  app.router.add({
+    "/home": {
+      states: {
+        main: "home"
+      }
+    },
+    "/contact": {
+      states: {
+        main: "contact"
       }
     }
-  }
-});
-
-router.redirect("/classes/classid/reports", function (err, location) {
-  console.log(location.get("params.classroom")); // classroom model
-  console.log(location.get("pathname")); // /classes/classid/reports
-  console.log(location.get("url")); // same as pathname, but also includes query params
-});
+  })
+};
 ```
 
 #### Entering Routes
