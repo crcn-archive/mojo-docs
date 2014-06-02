@@ -1,4 +1,4 @@
-BindableCollection's are similar to arrays, but you can listen to whenever they change. They're
+BindableCollections are similar to arrays, but you can listen to whenever they change. They're
 used quite a bit in Mojo views, especially lists.
 
 ## API
