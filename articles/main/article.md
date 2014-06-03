@@ -35,4 +35,5 @@ If you already have a pre-existing application, you can easily build Mojo on-top
 ## Examples
 
 - TodoMVC
+- [Delicorice](https://github.com/classdojo/delicorice)
 
