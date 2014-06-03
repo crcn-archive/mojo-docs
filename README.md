@@ -1,2 +1,5 @@
-mojo-docs
-=========
+### Running
+
+```javascript
+npm start
+```
