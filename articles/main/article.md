@@ -7,7 +7,7 @@
 
 <br />
 
-Mojo.js is a JavaScript framework for building Single Page Applications, or static websites in Node.js. Mojo was built around modularity. You don't have to worry about the extra baggage of including part of the framework that you don't actually use. You can even customize the framework to suite your needs. 
+Mojo.js is a JavaScript framework for building Single Page Applications, or static websites in Node.js. Mojo was built around modularity. You don't have to worry about the extra baggage of including part of the framework that you don't actually use. You can even customize the framework to suite your needs. Easily use your own router, template engine, models, view controllers. Incorporate Mojo into any framework. Mojo was built to suite your needs.
 
 <br />
 
