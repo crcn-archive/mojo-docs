@@ -11,7 +11,11 @@ Mojo.js is a JavaScript framework for building Single Page Applications, or stat
 
 <br />
 
-If you already have a pre-existing application, you can easily build Mojo on-top of it - this usually starts with just the Views. Mojo was built to help phase-out, or refactor codebases without a full application re-write, meaning you can slowly ease into it without worrying about the all-or-nothing approach associated with most JavaScript frameworks. 
+If you already have a pre-existing application, you can easily build Mojo on-top of it - use it in production on day 1. Mojo was built to help phase-out, or refactor codebases without a full, application re-write, meaning you can slowly ease into it without worrying about the all-or-nothing approach associated with most JavaScript frameworks. 
+
+<br />
+
+
 
 ## Getting Started
 
