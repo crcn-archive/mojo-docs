@@ -3,15 +3,19 @@
   "version": "0.0.1",
   "private": "true",
   "scripts": {
-    "start": "./node_modules/.bin/delicorice"
+    "start": "./node_modules/.bin/delicorice",
+    "hotswap": "./node_modules/.bin/ditto-proxy http://127.0.0.1:8081 --port=8090 --verbose --watch='./articles/**'"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/classdojo/mojo-docs.git"
   },
   "dependencies": {
-    "delicorice": "0.0.27",
+    "delicorice": "0.0.28",
     "bindable": "^0.5.37",
     "mojojs": "^0.8.1"
+  },
+  "devDependencies": {
+    "ditto": "0.0.11"
   }
 }
