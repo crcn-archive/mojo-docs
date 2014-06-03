@@ -1,5 +1,4 @@
 
-
 <p align="center">
   <a href="http://mojojs.com">
     <img src="https://s3.amazonaws.com/uploads.hipchat.com/12139/74559/TgjXBU1QpgjVwc0/mojo-js.png">
@@ -8,7 +7,7 @@
 
 <br />
 
-Mojo.js is a JavaScript framework for building Single Page Applications, or static websites in Node.js. Mojo was built around modularity - it's simply a group of libraries that work nicely together. You don't have to worry about the extra baggage of including part of the framework that you don't actually use. You can even customize the framework to suite your needs. 
+Mojo.js is a JavaScript framework for building Single Page Applications, or static websites in Node.js. Mojo was built around modularity. You don't have to worry about the extra baggage of including part of the framework that you don't actually use. You can even customize the framework to suite your needs. 
 
 <br />
 
