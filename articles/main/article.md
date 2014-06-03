@@ -11,16 +11,18 @@ Mojo.js is a JavaScript framework for building Single Page Applications, or stat
 Mojo was built to work nicely with other JavaScript frameworks...
 
 
-## Getting Started
+## Chapters
 
 1. Architecture
 2. Installation
 3. Designing & Scaffolding
-4. Routing
-5. Models
+4. View Controllers & Templates
+5. Routing
+6. Models
+7. Mediator
 
 ## Tutorials
 
-1. A/B Testing
+1. A/B Testing components
 2. Building a Node.js application
 3. realtime models using DNode
