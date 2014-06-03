@@ -20,9 +20,12 @@ Mojo was built to work nicely with other JavaScript frameworks...
 5. Routing
 6. Models
 7. Mediator
+8. Testing
 
 ## Tutorials
 
 1. A/B Testing components
 2. Building a Node.js application
 3. realtime models using DNode
+4. Internationalization
+5. Sharing data between View Controllers
