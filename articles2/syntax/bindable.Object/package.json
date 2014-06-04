@@ -1,0 +1,7 @@
+{
+  "_id": "bindable-objects",
+  "title": "bindable objects",
+  "related": ["bindable-collections"],
+  "category": "syntax",
+  "main": "./article.md"
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "paperclip-mojo-usage",
+  "title": "Paperclip Mojo Usage",
+  "tags": ["paperclip", "usage", "mojo", "template"],
+  "category": "templates",
+  "main": "./article.md"
+}

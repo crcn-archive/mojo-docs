@@ -1,0 +1,22 @@
+{
+  "title": "Introduction",
+  "tags": [
+    "view", 
+    "controller", 
+    "introduction", 
+    "sections", 
+    "define", 
+    "paper", 
+    "bindings", 
+    "render", 
+    "wilRender", 
+    "didRender",
+    "willRemove",
+    "didRemove",
+    "bubble",
+    "parent",
+    "dispose"
+  ],
+  "category": "views",
+  "main": "./article.md"
+}
