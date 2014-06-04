@@ -129,6 +129,15 @@ Bindable objects emit a few events:
 
 #### binding bindable.bind(from, options)
 
+`from` - property to bind from. Can be one, or multiple properties
+
+```javascript
+var person = new bindable.Object({ firstName: "Jon", lastName: "Doe" });
+person.bind("firstName, lastName", function (firstName, lastName) {
+  
+}).now();
+```
+
 `options` - the options for the binding
   - `to` - the property to bind to. Can be a `string`, `array`, or `function`
   - `target` - the target bindable object. Default is self
@@ -138,17 +147,19 @@ Bindable objects emit a few events:
   - `bothWays` - makes the data-binding bi-directional.
 
 ```javascript
-var obj = new bindable.Object({ name: "craig" });
-
-//bind to name2
-obj.bind("name", "name2").now();
+var obj = new bindable.Object({ firstName: "craig", lastName: "Jefferds" });
 
 //same as above, different style.
-obj.bind("name", { to: "name2" }).now();
+obj.bind("firstName", { to: "name2" }).now();
 
 // bind the name, but transform it to upper case
-obj.bind("name", { to: "name2", map: function (name) {
+obj.bind("firstName", { to: "upperFirstName", map: function (name) {
   return name.toUpperCase();
+}}).now();
+
+// find the full name
+obj.bind("firstName, lastName", { to: "fullName", map: function (firstName, lastName) {
+  return [firstName, lastName].join(" ");
 }}).now();
 ```
 
