@@ -1,1 +1,1 @@
-Welcome to the Mojo.js tutorial! These documents are here to serve as a step-by-step guide into building your first application using the Mojo.js framework. 
+Welcome to the Mojo.js tutorial! These docs serve as a step-by-step guide to help you build your first Mojo application. 
