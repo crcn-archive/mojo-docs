@@ -26,8 +26,6 @@ loginRequest.bind("result", function (result) {
   console.log(result); // { message: "logged in" }
 });
 
-
-
 ```
 
 
