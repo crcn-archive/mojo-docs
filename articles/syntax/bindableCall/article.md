@@ -62,6 +62,11 @@ views.Base.extend({
 `loginView.pc`:
 
 ```html
+
+{{#if:loginRequest.error}}
+  {{ loginRequest.error.message }}
+{{/}}
+
 <form data-bind="{{ onSubmit: login() }}">
   <input type="text" data-bind="{{ user: <~>username }}" placeholder="Username"></input>
   <input type="password" data-bind="{{ user: <~>password }}" placeholder="Password"></input>
