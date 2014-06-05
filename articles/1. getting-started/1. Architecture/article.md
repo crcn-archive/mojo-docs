@@ -14,7 +14,7 @@ The main entry point to your entire appliation. This acts like a sandbox. Everyt
 
 #### [Models & Collections](https://github.com/classdojo/bindable.js)
 
-Models & Collections represent data, and are generally gets displayed to the user. This data usually comes from some API, or service. Models are the **only** thing which should handle data, and all data should thus be wrapped as a model. Models should be designed around how your application is going to use them. Try not to design models around the API. 
+Models & Collections represent data which usually gets displayed to the user. This data usually comes from some API, or service. Models are the **only** thing which should handle data, and all data should thus be wrapped as a model, or collection. Models should be designed around how your application is going to use them. Try not to design models around the API. 
 
 #### [View Controllers](https://github.com/classdojo/mojo-views)
 
@@ -30,4 +30,4 @@ Registered commands which can be executed anywhere in the application.
 
 #### [Router](https://github.com/classdojo/kubrik.js)
 
-Maintains the state of your application.
+Maintains the state of your application. The application should not be design around the router, and vice versa. The router is an interchangeable component, and can be added last in the development lifecycle. 
