@@ -17,18 +17,19 @@ Mojo.js was designed around the [Strangler Pattern](http://martinfowler.com/blik
 
 
 
+### Tutorial
 
+1. Installation
+2. Designing & Scaffolding
+3. View Controllers & Templates
+4. Routing
+5. Models
+6. Mediator
+7. Testing
 
-### Getting Started
+### Concepts
 
 1. Architecture
-2. Installation
-3. Designing & Scaffolding
-4. View Controllers & Templates
-5. Routing
-6. Models
-7. Mediator
-8. Testing
 
 ### Tutorials
 
