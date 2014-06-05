@@ -14,19 +14,18 @@ Mojo.js is a Customizable JavaScript framework inspired by Node.js and Backbone.
 
 <br />
 
-Mojo.js was designed around the [Strangler Pattern](http://martinfowler.com/bliki/StranglerApplication.html). If you already have a pre-existing application, you can easily build Mojo on-top of it without a full, application re-write. Meaning you can slowly ease into it without worrying about the all-or-nothing approach associated with most JavaScript frameworks. 
+Mojo.js was designed with the [Strangler Pattern](http://martinfowler.com/bliki/StranglerApplication.html) in mind. If you already have a pre-existing application, you can easily build Mojo on-top of it without a full, application re-write. Meaning you can slowly ease into it without worrying about the all-or-nothing approach associated with most JavaScript frameworks. 
 
 
 
 ### Tutorial
 
-1. Installation
-2. Designing & Scaffolding
-3. View Controllers & Templates
-4. Routing
-5. Models
-6. Mediator
-7. Testing
+1. Designing & Scaffolding
+2. View Controllers & Templates
+3. Routing
+4. Models
+5. Mediator
+6. Testing
 
 ### Concepts
 
