@@ -19,7 +19,7 @@ Mojo.js was designed around the [Strangler Pattern](http://martinfowler.com/blik
 
 
 
-## Getting Started
+### Getting Started
 
 1. Architecture
 2. Installation
@@ -30,7 +30,7 @@ Mojo.js was designed around the [Strangler Pattern](http://martinfowler.com/blik
 7. Mediator
 8. Testing
 
-## Tutorials
+### Tutorials
 
 - A/B Testing components
 - Building a Node.js application
@@ -38,7 +38,7 @@ Mojo.js was designed around the [Strangler Pattern](http://martinfowler.com/blik
 - Internationalization
 - Sharing data between View Controllers
 
-## Examples
+### Examples
 
 - TodoMVC
 - [Delicorice](https://github.com/classdojo/delicorice)
