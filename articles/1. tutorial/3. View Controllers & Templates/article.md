@@ -1,0 +1,1 @@
+Now it's time to write some code. We'll start with the top-most view controller `views/main/index.js`.
