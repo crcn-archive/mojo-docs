@@ -35,7 +35,8 @@ app/
         index.pc
 ```
 
+This file structure is essentially what we see in the todos application, and anyone else looking at this will have an idea of what the application does. You'll notice two file types: `index.js`, and `index.pc`. The `index.js` file is the `view controller`, and the `index.pc` is the `view`, or what the user actually sees. We generally keep both the view controller, and view in the same spot to make things cleaner, and easier to read. 
 
-
+The terms `index` are derrived from `node.js`, and are given to `view controllers`, and `views`. The decision to use the `folder` as the view controller name was made since it provides better organization, and encapsulation between other parts of the application. It's also very easy to assume exactly how applications should be structured. 
 
 
