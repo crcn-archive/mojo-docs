@@ -31,7 +31,7 @@ Mojo.js was designed with the [Strangler Pattern](http://martinfowler.com/bliki/
 
 1. Architecture
 
-### Tutorials
+### How-tos
 
 - A/B Testing components
 - Building a Node.js application
