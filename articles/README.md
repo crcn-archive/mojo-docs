@@ -4,6 +4,7 @@
     <img src="https://s3.amazonaws.com/uploads.hipchat.com/12139/74559/TgjXBU1QpgjVwc0/mojo-js.png">
   </a>
   <h3 align="center">Customaizable Javascript MV+ Framework</h3>
+  <p class="center text-center"><a class="btn btn-default" href="https://github.com/classdojo/mojo-starter/archive/master.zip">Download Starter Kit</a></p>
 </p>
 
 
