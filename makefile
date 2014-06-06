@@ -1,4 +1,5 @@
 M="update docs"
+
 update:
 	git add -A;
 	git commit -m "$(M)";
