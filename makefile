@@ -1,4 +1,4 @@
-M="update docs"
+M=update
 
 update:
 	git add -A;

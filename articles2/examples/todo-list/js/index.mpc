@@ -1,5 +1,0 @@
-## Below
-
-<div>
-  {{ html: sections.example }}
-</div>

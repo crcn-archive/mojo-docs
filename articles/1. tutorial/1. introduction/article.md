@@ -1,3 +1,5 @@
+
+
 This guide will help wak you through all the phases of building a mojo.js [todoMVC](http://todomvc.com/) application, from designing, scaffolding to implementation.
 
 Remember that Mojo.js is entirely modular. You can use any model, view, template engine, etc. The modules we'll be using in this tutorial are:
@@ -21,3 +23,8 @@ At the end of this tutorial, you'll be able to:
 
 - [Node.js](http://nodejs.org/) - needed to build your application.
 - [Starter kit](https://github.com/classdojo/mojo-starter/archive/master.zip) - starter project.
+
+### Source Code
+
+For those that want to skip the tutorial: 
+https://github.com/classdojo/mojo-todomvc

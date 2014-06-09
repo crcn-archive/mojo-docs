@@ -1,6 +1,0 @@
-{
-  "title": "Integration Tests",
-  "tags": ["integration", "tests"],
-  "category": "testing",
-  "main": "./article.md"
-}

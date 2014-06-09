@@ -1,6 +1,0 @@
-{
-  "title": "E2E Tests",
-  "tags": ["e2e", "test"],
-  "category": "testing",
-  "main": "./article.md"
-}
