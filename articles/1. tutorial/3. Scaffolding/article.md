@@ -168,27 +168,46 @@ in another sub-component.
 Now let's move onto the `todos` sub-component. Copy the following code `views/main/todos/index.js`:
 
 ```javascript
-var views = require("mojo-views");
+var views = require("mojo-views"),
+bindable  = require("bindable");
+
 module.exports = views.Base.extend({
-  paper: require("./index.pc")
+
+  /**
+   */
+
+  paper: require("./index.pc"),
+
+  /**
+   * temporary fixtures
+   */
+
+  todos: new bindable.Collection([
+    new bindable.Object({ text: "Wash Car" }),
+    new bindable.Object({ text: "Walk Dog" })
+  ]),
+
+  /**
+   */
+
+  sections: {
+    items: {
+      type: "list",
+      source: "todos",
+      modelViewClass: require("./todo")
+    }
+  }
 });
 ```
 
-Just like the header view, and maybe not so [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) since we're literally copying and pasting the same code, but it'll be different
+This is just like the header view, and maybe not so [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) since we're literally copying and pasting the same code, but it'll be different
 in the end. Remember, we're just creating the `scaffolding` for our application. We'll fill-in the implementation later. Now, just like the header view, copy the following code into
 `views/main/todos/index.pc`:
 
 ```html
 <section id="main">
   <ul id="todo-list">
-    <li class="completed">
-      <input type="checkbox" class="toggle" />
-      <label>Wash Dog</label><button class="destroy"></button>
-    </li>
-    <li>
-      <input type="checkbox" class="toggle" />
-      <label>Clean Car</label><button class="destroy"></button>
-    </li>
+    {{ html: sections.items }}
   </ul>
 
   <input type="checkbox" id="toggle-all" />
@@ -196,4 +215,4 @@ in the end. Remember, we're just creating the `scaffolding` for our application.
 ```
 
 Time to wire it up. Create a new section called `todos` in `views/main/index.js`, and in `views/main/index.pc`. Refresh the browser, and you should *still* see the todos section, except
-now it's in a more encapsulated, manageable place. I'll assume you can take it from here. 
+now it's in a more encapsulated, manageable place.
