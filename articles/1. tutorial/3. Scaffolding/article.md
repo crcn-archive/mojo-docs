@@ -1,6 +1,5 @@
 Let's first write the HTML & CSS. First download the [CSS styles](https://raw.githubusercontent.com/classdojo/mojo-todomvc-example/master/build/style.css) to `build/style.css`.
 
-
 Next, let's write all the HTML necessary for the todo app. Copy all this stuff into `views/main/index.pc`:
 
 ```html
