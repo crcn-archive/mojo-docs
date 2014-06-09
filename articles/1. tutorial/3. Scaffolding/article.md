@@ -159,7 +159,7 @@ Next, we'll need to modify the main template again. Copy the following chunk of 
 
 
 Notice `{{ html: sections.header }}`. This block specifies where our header should go in the template file. Basically, view controllers do exactly as their name suggests - they
-control what the user sees, so it makes sense to let the view controller specify exactly what sub-views should be displayed to the user.
+control what the user sees, so it makes sense to let the view controller specify what sub-views should be displayed to the user.
 
 After adding the `header section` in the template, go ahead and refresh the browser. Your todo application should look exactly the same. The only difference is that `header` is specified
 in another sub-component.
