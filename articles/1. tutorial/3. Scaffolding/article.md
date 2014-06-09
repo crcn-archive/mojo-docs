@@ -233,8 +233,8 @@ module.exports = views.Base.extend({
    */
 
   todos: new bindable.Collection([
-    new bindable.Object({ text: "Wash Car" }),
-    new bindable.Object({ text: "Walk Dog" })
+    new bindable.Object({ }),
+    new bindable.Object({ })
   ]),
 
   /**
