@@ -67,7 +67,7 @@ module.exports = views.Base.extend({
 ```
 
 Notice `require("./index.pc")` - this is derived from `node.js`. Basically, we're *requiring* a file located in the same directory of the view controller. This happens to be
-the template which gets displayed to the user. The term `paper` is terminology used in the template engine `paperclip`. Whereas `paper` is the template, and `clips` are the
+the template which gets displayed to the user. The term `paper` is terminology used for the template engine `paperclip`. Whereas `paper` is the template, and `clips` are the
 data-bindings. `paper: require("./index.pc")` is basically saying: "load `index.pc` from the same directory as `index.js`, and use that as a paperclip template".
 
 `module.exports` is also derived from `node.js`, and exposes your view controller so it can be used elsewhere.
@@ -159,4 +159,41 @@ Next, we'll need to modify the main template again. Copy the following chunk of 
 ```
 
 
-Notice `{{ html: sections.header }}`. This chunk specifies where our header should go in the template file. 
+Notice `{{ html: sections.header }}`. This block specifies where our header should go in the template file. Basically, view controllers do exactly as their name suggests - they
+control exactly what the user sees, so it makes sense to let the view controller specify exactly what sub-views should be displayed to the user.
+
+After adding the `header section` in the template, go ahead and refresh the browser. Your todo application should look exactly the same. The only difference is that `header` is specified
+in another sub-component.
+
+Now let's move onto the `todos` sub-component. Copy the following code `views/main/todos/index.js`:
+
+```javascript
+var views = require("mojo-views");
+module.exports = views.Base.extend({
+  paper: require("./index.pc")
+});
+```
+
+Just like the header view, and maybe not so [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) since we're literally copying and pasting the same code, but it'll be different
+in the end. Remember, we're just creating the `scaffolding` for our application. We'll fill-in the implementation later. Now, just like the header view, copy the following code into
+`views/main/todos/index.pc`:
+
+```html
+<section id="main">
+  <ul id="todo-list">
+    <li class="completed">
+      <input type="checkbox" class="toggle" />
+      <label>Wash Dog</label><button class="destroy"></button>
+    </li>
+    <li>
+      <input type="checkbox" class="toggle" />
+      <label>Clean Car</label><button class="destroy"></button>
+    </li>
+  </ul>
+
+  <input type="checkbox" id="toggle-all" />
+</section>
+```
+
+Time to wire it up. Create a new section called `todos` in `views/main/index.js`, and in `views/main/index.pc`. Refresh the browser, and you should *still* see the todos section, except
+now it's in a more encapsulated, manageable place. I'll assume you can take it from here. 
