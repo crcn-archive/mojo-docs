@@ -66,7 +66,7 @@ module.exports = views.Base.extend({
 });
 ```
 
-Notice `require("./index.pc")` - this is derived from `node.js`. Basically, we're *requiring* a file located in the same directory of the view controller. This happens to be
+Notice `require("./index.pc")` - this is derived from [node.js](http://en.wikipedia.org/wiki/Node.js). Basically, we're *requiring* a file located in the same directory of the view controller. This happens to be
 the template which gets displayed to the user. The term `paper` is terminology used for the template engine `paperclip`. Whereas `paper` is the template, and `clips` are the
 data-bindings. `paper: require("./index.pc")` is basically saying: "load `index.pc` from the same directory as `index.js`, and use that as a paperclip template".
 
