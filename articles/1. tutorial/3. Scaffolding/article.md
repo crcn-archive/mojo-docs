@@ -127,7 +127,6 @@ Next, we'll need to modify the main template again. Copy the following chunk of 
         <label>Clean Car</label><button class="destroy"></button>
       </li>
     </ul>
-
     <input type="checkbox" id="toggle-all" />
   </section>
 
@@ -168,6 +167,57 @@ in another sub-component.
 Now let's move onto the `todos` sub-component. Copy the following code `views/main/todos/index.js`:
 
 ```javascript
+var views = require("mojo-views");
+module.exports = views.Base.extend({
+  paper: require("./index.pc")
+});
+```
+
+This is just like the header view, and maybe not so [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) since we're literally copying and pasting the same code, but it'll be different
+in the end. Remember, we're just creating the `scaffolding` for our application. We'll fill-in the implementation later. Now, just like the header view, copy the following code into
+`views/main/todos/index.pc`:
+
+```html
+<section id="main">
+  <ul id="todo-list">
+    <li class="completed">
+      <input type="checkbox" class="toggle" />
+      <label>Wash Dog</label><button class="destroy"></button>
+    </li>
+    <li>
+      <input type="checkbox" class="toggle" />
+      <label>Clean Car</label><button class="destroy"></button>
+    </li>
+  </ul>
+  <input type="checkbox" id="toggle-all" />
+</section>
+```
+
+Time to wire it up. Create a new section called `todos` in `views/main/index.js`, and in `views/main/index.pc`. Refresh the browser, and you should *still* see the todos section, except
+now it's in a more encapsulated, manageable place.
+
+Now it's time to add a list of todo items. Add a new file called `views/main/todos/todo/index.js`, and copy the same view controller code:
+
+```javascript
+var views = require("mojo-views");
+module.exports = views.Base.extend({
+  paper: require("./index.pc")
+});
+```
+
+in `views/main/todos/todo/index.pc`, copy the following code:
+
+```html
+<li>
+  <input type="checkbox" class="toggle" />
+  <label>Wash Dog</label><button class="destroy"></button>
+</li>
+```
+
+Back to `views/main/todos/index.js`, copy the following code:
+
+
+```javascript
 var views = require("mojo-views"),
 bindable  = require("bindable");
 
@@ -200,19 +250,52 @@ module.exports = views.Base.extend({
 });
 ```
 
-This is just like the header view, and maybe not so [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) since we're literally copying and pasting the same code, but it'll be different
-in the end. Remember, we're just creating the `scaffolding` for our application. We'll fill-in the implementation later. Now, just like the header view, copy the following code into
-`views/main/todos/index.pc`:
+Essentially, we're setting up the view controller to create a new `todo` component for *each* todo model. Notice the `bindable.Collection([..])` chunk, this is
+just fake information we'll use to make sure everything looks great in the browser. Later, we'll replace it with real model data. The `sections` property also looks
+a bit different. `Type` just points to a registered view component. Registered view components are re-usable pieces of code that are accessible anywhere in the application.
+Mojo.js comes with a few registered components by default: `list`, and `states`. Since we're displaying a list of todos, we'll use the `list` component. The other
+properties you see: `source`, and `modelViewClass` are just properties which are set to the sub-component. `Source` can be a `bindable collection`, or a `string`. In the
+view controller above, we're specifying `source: "todos"`, which is pointing to the fake model data.  Since the list is actually a sub-component,
+it's is actually *inheriting* the `todos` property from the parent component. This is very similar to how variable scope works in JavaScript. More of that later.
+
+Now we need to update our todos template. Copy the following code into `views/main/todos/todo/index.pc`:
 
 ```html
 <section id="main">
   <ul id="todo-list">
     {{ html: sections.items }}
   </ul>
-
   <input type="checkbox" id="toggle-all" />
 </section>
 ```
 
-Time to wire it up. Create a new section called `todos` in `views/main/index.js`, and in `views/main/index.pc`. Refresh the browser, and you should *still* see the todos section, except
-now it's in a more encapsulated, manageable place.
+Refresh your browser, and should see your new todos component.
+
+The last bit is setting up the footer view. I'll assume you know how to set it up at this point. Just follow the same process as the header view, and you should have a todo
+application that's ready for the next part of this tutorial.
+
+In the end, you're folder structure should look like this:
+
+
+```
+views/
+  main/
+    index.js
+    index.pc
+    header/
+      index.js
+      index.pc
+    todos/
+      index.js
+      index.pc
+      todo/
+        index.js
+        index.pc
+    footer/
+      index.js
+      index.pc
+```
+
+This file structure is essentially what we see in the todos application, and anyone else looking at this will have an idea of what the application does. The decision to use the
+folder as the view controller name is to provide better organization, and encapsulation between other parts of the application. It's also an easy pattern to follow. Anyone building
+a new application can intuitively figure out how to structure an application *just by looking at it*. 
