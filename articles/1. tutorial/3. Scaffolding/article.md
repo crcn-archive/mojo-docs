@@ -296,6 +296,6 @@ views/
       index.pc
 ```
 
-This file structure is essentially what we see in the todos application, and anyone else looking at this will have an idea of what the application does. The decision to use the
-folder as the view controller name is to provide better organization, and encapsulation between other parts of the application. It's also an easy pattern to follow. Anyone building
+This file structure is essentially what we the user sees, and anyone else looking at this folder structure will have an idea of what the application does. It's a nice 1-1 map.
+The decision to use the folder as the view controller name is to provide better organization, and encapsulation between other parts of the application. It's also an easy pattern to follow. Anyone building
 a new application can intuitively figure out how to structure an application *just by looking at it*.
