@@ -26,5 +26,5 @@ At the end of this tutorial, you'll be able to:
 
 ### Source Code
 
-For those that want to skip the tutorial: 
-https://github.com/classdojo/mojo-todomvc
+For those that want to skip the tutorial, you can download the full source code here:
+https://github.com/classdojo/mojo-todomvc-example
