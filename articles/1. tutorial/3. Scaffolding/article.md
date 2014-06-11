@@ -55,7 +55,9 @@ Go ahead and run `npm start` on the project if you haven't already, and then ope
 
 ![Alt screenshot](https://cloud.githubusercontent.com/assets/757408/3209463/7960affa-ee70-11e3-9119-c4581cf6e5f9.png)
 
-So now we've written the HTML & CSS, we can now start breaking our application down into smaller components. First copy the following code into `views/main/header/index.js`:
+So now we've written the HTML & CSS, we can now start breaking our application down into smaller components.
+
+First copy the following code into `views/main/header/index.js`:
 
 ```javascript
 var views = require("mojo-views");
@@ -64,11 +66,11 @@ module.exports = views.Base.extend({
 });
 ```
 
-Notice `require("./index.pc")` - this is derived from [node.js](http://en.wikipedia.org/wiki/Node.js). Basically, we're *requiring* a file located in the same directory of the view controller. This happens to be
+Notice `require("./index.pc")` - this is derived from [commonjs](http://en.wikipedia.org/wiki/CommonJS). Basically, we're *requiring* a file located in the same directory of the view controller. This happens to be
 the template which gets displayed to the user. The term `paper` is terminology used for the template engine `paperclip`. Whereas `paper` is the template, and `clips` are the
 data-bindings. `paper: require("./index.pc")` is basically saying: "load `index.pc` from the same directory as `index.js`, and use that as a paperclip template".
 
-`module.exports` is also derived from `node.js`, and exposes your view controller so it can be used elsewhere.
+`module.exports` is also derived from `commonjs`, and exposes your view controller.
 
 Next, copy the following HTML from `views/main/index.pc` into `views/main/header/index.pc`:
 
@@ -92,7 +94,9 @@ views/
 ```
 
 
-We're not actually done yet. We still need to `require` our new header view controller. So how do we do that? Easy - just copy the following chunk of code into `views/main/index.js`:
+We're not actually done yet. We still need to use our new header sub-view. So how do we do that? Just add a new section.
+
+Copy the following chunk of code into `views/main/index.js`:
 
 ```javascript
 var views = require("mojo-views");
@@ -105,7 +109,8 @@ module.exports = views.Base.extend({
 });
 ```
 
-`Sections` are nice little helpers which allow you to specify sub-views in your view controller. They're great for breaking components into smaller, more manageable chunks of code.
+`Sections` are nice helpers which allow you to specify sub-views in your view controller. They're great for breaking components into smaller, more manageable chunks of code.
+
 
 Next, we'll need to modify the main template again. Copy the following chunk of code into `views/main/index.pc`:
 
@@ -162,7 +167,7 @@ control what the user sees, so it makes sense to let the view controller specify
 After adding the `header section` in the template, go ahead and refresh the browser. Your todo application should look the same. The only difference is that `header` is specified
 in another sub-component.
 
-Now let's move onto the `todos` sub-component. Copy the following code `views/main/todos/index.js`:
+Now let's move onto the `todos` sub-component. Copy the following code into `views/main/todos/index.js`:
 
 ```javascript
 var views = require("mojo-views");
@@ -192,7 +197,7 @@ in the end. Remember, we're just creating the `scaffolding` for our application.
 ```
 
 Time to wire it up. Create a new section called `todos` in `views/main/index.js`, and in `views/main/index.pc`. Refresh the browser, and you should *still* see the todos section, except
-now it's in a more encapsulated, manageable place.
+now it's a sub-component located in an encapsulated, manageable place.
 
 Now it's time to add a list of todo items. Add a new file called `views/main/todos/todo/index.js`, and copy the same view controller code:
 
@@ -252,9 +257,9 @@ Essentially, we're setting up the view controller to create a new `todo` compone
 just fake information we'll use to make sure everything looks great in the browser. Later, we'll replace it with real model data. The `sections` property also looks
 a bit different. `Type` just points to a registered view component. Registered view components are re-usable pieces of code that are accessible anywhere in the application.
 Mojo.js comes with a few registered components by default: `list`, and `states`. Since we're displaying a list of todos, we'll use the `list` component. The other
-properties you see: `source`, and `modelViewClass` are just properties which are set to the sub-component. `Source` can be a `bindable collection`, or a `string`. In the
-view controller above, we're specifying `source: "todos"`, which is pointing to the fake model data.  Since the list is actually a sub-component,
-it's is actually *inheriting* the `todos` property from the parent component. This is very similar to how variable scope works in JavaScript. More of that later.
+properties you see: `source`, and `modelViewClass` are just properties which are set to the sub-component. The `modelViewClass` property creates a new view class for each model,
+in the source. `Source` can be a `bindable collection`, or a `string`. In the view controller above, we're specifying `source: "todos"`, which is pointing to the fake model data. Since the list is actually a sub-component, it's is actually *inheriting* the `todos` property from the parent component. This is very similar to how variable scope works in JavaScript. More of that later.
+
 
 Now we need to update our todos template. Copy the following code into `views/main/todos/todo/index.pc`:
 
