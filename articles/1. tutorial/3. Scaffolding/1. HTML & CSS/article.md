@@ -55,6 +55,8 @@ Go ahead and run `npm start` on the project if you haven't already, and then ope
 
 ![Alt screenshot](https://cloud.githubusercontent.com/assets/757408/3209463/7960affa-ee70-11e3-9119-c4581cf6e5f9.png)
 
+So now we've written the HTML & CSS, we can now start breaking our application down into smaller components.
+
 Now comes the fun part. After we have *all* the HTML necessary for the component we're trying to build, we can start breaking that HTML into smaller components. Let's start
 with the header. First copy the following code into `views/main/header/index.js`:
 

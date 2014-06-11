@@ -1,8 +1,6 @@
 BindableCollections are similar to arrays, but you can listen to whenever they change. They're
 used quite a bit in Mojo views, especially lists.
 
-## API
-
 #### object collection.at(index)
 
 returns an item at the given index
@@ -29,9 +27,21 @@ returns the index of an item
 
 #### array collection.filter(fn)
 
+filters the collection
+
 #### collection.each(fn)
 
+Iterates through the collection
+
+```javascript
+collection.each(function (item) {
+
+});
+```
+
 #### array collection.map(fn)
+
+maps the collection
 
 #### string collection.join(sep)
 
@@ -58,10 +68,3 @@ removes an item at the end of the collection
 #### collection.shift()
 
 removes an item at the begging of a collection
-
-## Computed Properties
-
-
-
-
-
