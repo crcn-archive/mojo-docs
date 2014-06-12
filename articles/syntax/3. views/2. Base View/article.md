@@ -22,9 +22,7 @@ var view = new SomeView();
 document.body.appendChild(view.render());
 ```
 
-### API
-
-#### render()
+#### view.render()
 
 renders the view
 
@@ -34,7 +32,7 @@ var documentFragment = view.render();
 document.body.appendChild(documentFragment);
 ```
 
-#### remove()
+#### view.remove()
 
 removed the view from the DOM
 
@@ -44,7 +42,7 @@ document.body.appendChild(view.render());
 view.remove(); // removes view from the document body
 ```
 
-#### didCreateSection()
+#### view.didCreateSection()
 
 Called right after a section is created. This is an overridable method - do any sort of initial DOM manipulation here.
 
@@ -56,7 +54,7 @@ var SomeView = views.Base.extend({
 });
 ```
 
-#### willRender()
+#### view.willRender()
 
 called right before `.render()` is called on a view. It's also called before any decorators are initialized such as `bindings`, `events`, and `templates`.
 
@@ -68,7 +66,7 @@ var SomeView = views.Base.extend({
 });
 ```
 
-#### didRender()
+#### view.didRender()
 
 called right after `.render()` is called on the view. This method called after any decorators are initialized.
 
@@ -80,7 +78,7 @@ var SomeView = views.Base.extend({
 });
 ```
 
-#### didRemove()
+#### view.didRemove()
 
 called right after `.remove()` is called. At this point, the view is detached from the DOM, or parent elements.
 
