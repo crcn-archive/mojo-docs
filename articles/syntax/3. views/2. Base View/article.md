@@ -68,12 +68,13 @@ var SomeView = views.Base.extend({
 
 #### view.didRender()
 
-called right after `.render()` is called on the view. This method called after any decorators are initialized.
+called right after `.render()` is called on the view. This method called after any decorators are initialized. It's also a good
+spot for any additional DOM manipulations.
 
 ```javascript
 var SomeView = views.Base.extend({
   didRender: function () {
-    // do stuff immediately after rendering
+    this.$(".some-class").someJqueryFn();
   }
 });
 ```
@@ -82,13 +83,6 @@ var SomeView = views.Base.extend({
 
 called right after `.remove()` is called. At this point, the view is detached from the DOM, or parent elements.
 
-```javascript
-var SomeView = views.Base.extend({
-  didRemove: function () {
-    // do stuff immediately after removing from the DOM, or parent elements.
-  }
-});
-```
 
 ### Events
 
