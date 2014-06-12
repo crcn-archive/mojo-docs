@@ -1,7 +1,5 @@
-Application is what initializes, and bootstraps your application.
-
-
-### API
+[mojo-application](https://github.com/classdojo/mojo-application) is your main entry point. It's not very complex - just some glue to help bootstrap
+your application. 
 
 #### application.use(plugin)
 

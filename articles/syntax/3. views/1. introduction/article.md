@@ -12,10 +12,6 @@ app.use(require("mojo-views")); // view controller plugin
 
 View controllers are entirely plugin-based, meaning you can customize their behavior to suite your needs.  
 
-### API
-
-`mojo-views` will add a few methods to your application:
-
 #### app.views.register(className, clazz)
 
 Registers a view controller class.
