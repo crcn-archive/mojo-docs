@@ -22,6 +22,10 @@ var view = new SomeView();
 document.body.appendChild(view.render());
 ```
 
+#### view.section
+
+The [section](https://github.com/classdojo/loaf.js) which gets displayed to the user. This is basically a document fragment.
+
 #### view.render()
 
 renders the view
@@ -44,7 +48,7 @@ view.remove(); // removes view from the document body
 
 #### view.didCreateSection()
 
-Called right after a section is created. Sections are basically document fragments. They're what get displayed to the user.
+Called right after a section is created.
 
 #### view.willRender()
 
