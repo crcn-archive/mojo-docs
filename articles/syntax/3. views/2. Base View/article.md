@@ -1,27 +1,5 @@
 Base views control what the user sees & does. They have all the same methods as bindable objects. The best way to create a view is to first create a sub-class, then instantiate it. For example:
 
-```javascript
-var views = require("mojo-views");
-
-var SomeView = views.Base.extend({
-
-  /**
-   * sections are the "View" in MVC. They're what the user sees.
-   * In this example, append "Hello World" text to the section.
-   */
-
-  didCreateSection: function () {
-    this.section.append(document.createTextNode("Hello World!"));
-  }
-});
-
-
-var view = new SomeView();
-
-// append the document fragment created by the sub view
-document.body.appendChild(view.render());
-```
-
 #### views.Base(properties, application)
 
 - `properties` - properties set to the view controller
@@ -69,7 +47,27 @@ view.remove(); // removes view from the document body
 
 #### view.didCreateSection()
 
-Called right after a section is created.
+Called right after a section is created. Note that this method is called before `render()`, or any other view controller plugins.
+
+```javascript
+var views = require("mojo-views");
+
+var SomeView = views.Base.extend({
+
+  /**
+   */
+
+  didCreateSection: function () {
+    this.section.append(document.createTextNode("Hello World!"));
+  }
+});
+
+
+var view = new SomeView();
+
+// append the document fragment created by the sub view
+document.body.appendChild(view.render());
+```
 
 #### view.willRender()
 
@@ -77,16 +75,7 @@ called right before `.render()` is called on a view. It's also called before any
 
 #### view.didRender()
 
-called right after `.render()` is called on the view. This method called after any decorators are initialized. It's also a good
-spot for any additional DOM manipulations.
-
-```javascript
-var SomeView = views.Base.extend({
-  didRender: function () {
-    this.$(".some-class").someJqueryFn();
-  }
-});
-```
+called right after `.render()` is called on the view.
 
 #### view.didRemove()
 
