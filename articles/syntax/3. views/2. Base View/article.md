@@ -44,12 +44,11 @@ view.remove(); // removes view from the document body
 
 #### view.didCreateSection()
 
-Called right after a section is created. This is an overridable method - do any sort of initial DOM manipulation here.
+Called right after a section is created.
 
 ```javascript
 var SomeView = views.Base.extend({
   didCreateSection: function () {
-    // do stuff immediately after creating section
   }
 });
 ```
@@ -57,14 +56,6 @@ var SomeView = views.Base.extend({
 #### view.willRender()
 
 called right before `.render()` is called on a view. It's also called before any decorators are initialized such as `bindings`, `events`, and `templates`.
-
-```javascript
-var SomeView = views.Base.extend({
-  willRender: function () {
-    // do stuff right before rendering the view
-  }
-});
-```
 
 #### view.didRender()
 
