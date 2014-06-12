@@ -3,7 +3,7 @@ Base views control what the user sees & does. They have all the same methods as 
 ```javascript
 var views = require("mojo-views");
 
-var SomeView = views.extend({
+var SomeView = views.Base.extend({
 
   /**
    * sections are the "View" in MVC. They're what the user sees.
@@ -22,9 +22,30 @@ var view = new SomeView();
 document.body.appendChild(view.render());
 ```
 
+#### views.Base(properties, application)
+
+- `properties` - properties set to the view controller
+- `application` - the application instance
+
+```javascript
+var view = new views.Base({ name: "some-view" }, new Application());
+console.log(view.name); // some-view
+console.log(view.application); // application above
+```
+
 #### view.section
 
 The [section](https://github.com/classdojo/loaf.js) which gets displayed to the user. This is basically a document fragment.
+
+### view.application
+
+The application instance
+
+```javascript
+var app = new Application();
+var BaseView =
+```
+
 
 #### view.render()
 
@@ -70,6 +91,7 @@ var SomeView = views.Base.extend({
 #### view.didRemove()
 
 called right after `.remove()` is called. At this point, the view is detached from the DOM, or parent elements.
+
 
 
 ### Events

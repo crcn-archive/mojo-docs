@@ -1,5 +1,28 @@
 [mojo-application](https://github.com/classdojo/mojo-application) is your main entry point. It's not very complex - just some glue to help bootstrap
-your application. 
+your application.
+
+#### Application(options)
+
+- `options`
+  - `nodeFactory` - the node factory to use when creating elements. This is automatically set when undefined.
+
+```javascript
+// node factory
+var nofactor = require("nofactor");
+
+// use the DOM node factory - meant for the browser
+var app = new Application({ nodeFactory: nofactor.dom });
+
+// use the string node factory - meant for node.js
+var app = new Application({ nodeFactory: nofactor.string });
+
+// use the default node factory - automatically identified based on platform.
+var app = new Application({ nodeFactory: nofactor["default"] });
+```
+
+#### application.nodeFactory
+
+the [node factory](https://github.com/classdojo/nofactor.js) to use when creating elements. This allows us to run on multiple platforms.
 
 #### application.use(plugin)
 
