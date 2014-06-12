@@ -232,15 +232,6 @@ module.exports = views.Base.extend({
   paper: require("./index.pc"),
 
   /**
-   * temporary fixtures
-   */
-
-  todos: new bindable.Collection([
-    new bindable.Object({ }),
-    new bindable.Object({ })
-  ]),
-
-  /**
    */
 
   sections: {
@@ -253,6 +244,49 @@ module.exports = views.Base.extend({
 });
 ```
 
+Essentially, we're setting up the view controller to create a new `todo` view for each `todo` item. Each `todo` item is coming from
+`source: "todos"`, so we'll need to set that.
+
+Open up `app/js/index.js`, and replace everything with this chunk of code:
+
+```javascript
+var Application = require("mojo-application"),
+bindable        = require("bindable");
+
+module.exports = Application.extend({
+  registerPlugins: function () {
+
+    this.use(require("mojo-mediator"));
+    this.use(require("mojo-models"));
+    this.use(require("mojo-views"));
+    this.use(require("mojo-paperclip"));
+    this.use(require("mojo-router"));
+
+    this.use(require("./commands"));
+    this.use(require("./models"));
+    this.use(require("./views"));
+    this.use(require("./templates"));
+    this.use(require("./routes"));
+  },
+  didInitialize: function (options) {
+
+    var todoModels = new bindable.Collection([
+      new bindable.Object({ text: "Clean Car", completed: true }),
+      new bindable.Object({ text: "Wash Cat", completed: false })
+    ]);
+
+    var mainView = this.views.create("main", {
+      todos: todoModels
+    });
+
+    $(options.element).append(mainView.render());
+  }
+});
+```
+
+
+
+
 Essentially, we're setting up the view controller to create a new `todo` component for *each* todo model. Notice the `bindable.Collection([..])` chunk, this is
 just fake information we'll use to make sure everything looks great in the browser. Later, we'll replace it with real model data. The `sections` property also looks
 a bit different. `Type` just points to a registered view component. Registered view components are re-usable pieces of code that are accessible anywhere in the application.
@@ -264,12 +298,15 @@ in the source. `Source` can be a `bindable collection`, or a `string`. In the vi
 Now we need to update our todos template. Copy the following code into `views/main/todos/todo/index.pc`:
 
 ```html
-<section id="main">
-  <ul id="todo-list">
-    {{ html: sections.items }}
-  </ul>
-  <input type="checkbox" id="toggle-all" />
-</section>
+<li data-bind="{{
+  css: {
+    completed: model.completed
+  }
+}}">
+  <input type="checkbox" class="toggle" />
+  <label>{{ model.text }}</label>
+  <button class="destroy"></button>
+</li>
 ```
 
 Refresh your browser, and should see your new todos component.
