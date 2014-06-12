@@ -44,14 +44,7 @@ view.remove(); // removes view from the document body
 
 #### view.didCreateSection()
 
-Called right after a section is created.
-
-```javascript
-var SomeView = views.Base.extend({
-  didCreateSection: function () {
-  }
-});
-```
+Called right after a section is created. Sections are basically document fragments. They're what get displayed to the user.
 
 #### view.willRender()
 
