@@ -1,6 +1,4 @@
-Base views control what the user sees & does. They're the base class for all view controllers including `states`, and `lists`.
-
-The best way to create a view is to first create a sub-class, then instantiate it. For example:
+Base views control what the user sees & does. They have all the same methods as bindable objects. The best way to create a view is to first create a sub-class, then instantiate it. For example:
 
 ```javascript
 var views = require("mojo-views");
