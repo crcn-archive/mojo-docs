@@ -63,6 +63,8 @@ $(document.body).append(mainView.render()); // will display "Hello World!" to th
 
 Registers a new plugin that gets attached to all view controllers that match the value returned in `getOptions`.
 
+Decorators are useful if you want to extend the functionality of mojo-views, such as registering your own template engine. For example:
+
 ```javascript
 // handlebars plugin
 app.views.decorator({
