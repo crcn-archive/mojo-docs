@@ -8,7 +8,8 @@ your application.
 
 ```javascript
 // node factory
-var nofactor = require("nofactor");
+var nofactor = require("nofactor"),
+Application  = require("mojo-application");
 
 // use the DOM node factory - meant for the browser
 var app = new Application({ nodeFactory: nofactor.dom });

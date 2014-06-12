@@ -1281,9 +1281,9 @@
       "from": "comerr@"
     },
     "delicorice": {
-      "version": "0.0.39",
-      "from": "delicorice@0.0.x",
-      "resolved": "http://registry.npmjs.org/delicorice/-/delicorice-0.0.39.tgz",
+      "version": "0.0.42",
+      "from": "delicorice@0.0.42",
+      "resolved": "http://registry.npmjs.org/delicorice/-/delicorice-0.0.42.tgz",
       "dependencies": {
         "traverse": {
           "version": "0.6.6",
