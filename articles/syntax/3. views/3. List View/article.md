@@ -6,7 +6,7 @@ var views = require("mojo-views"),
 bindable  = require("bindable");
 
 var PersonView = views.Base.extend({
-  // properties...
+  paper: require("./person.pc")
 });
 
 var PeopleView = views.List.extend({
