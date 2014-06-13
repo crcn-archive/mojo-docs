@@ -62,4 +62,4 @@ console.log(mainView.get("fullName")); // Jake Anderson
 
 ### Custom
 
-TODO
+You can easily add your custom decorators to view controllers. See the view introduction for more info.
