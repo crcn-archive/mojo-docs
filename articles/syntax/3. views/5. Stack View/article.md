@@ -4,11 +4,11 @@ state of the stack view.
 ```javascript
 //
 var HomeView = views.Base.extend({
-  // render props
+  paper: require("./home.pc")
 });
 
 var ContactView = views.Base.extend({
-  // render props
+  paper: require("./contact.pc")
 });
 
 
