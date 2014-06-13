@@ -17,13 +17,7 @@ The [section](https://github.com/classdojo/loaf.js) which gets displayed to the 
 
 ### view.application
 
-The application instance
-
-```javascript
-var app = new Application();
-var BaseView =
-```
-
+The application
 
 #### view.render()
 
