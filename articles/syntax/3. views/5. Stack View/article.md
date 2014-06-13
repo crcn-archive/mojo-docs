@@ -1,13 +1,17 @@
-The stack view contains a number of children, one of which is displayed at a time given the
-state of the stack view.
+The stack view is a container which has many children, of which only one is displayed at a time. Stack views
+are very when building single page applications that have navigation. Here's a basic example of using the stack view:
 
 ```javascript
 //
 var HomeView = views.Base.extend({
+
+  // point to the home paperclip template
   paper: require("./home.pc")
 });
 
 var ContactView = views.Base.extend({
+
+  // point to the contact paperclip template
   paper: require("./contact.pc")
 });
 
