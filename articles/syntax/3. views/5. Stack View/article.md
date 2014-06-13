@@ -30,6 +30,10 @@ view.set("state", "contact"); // contact view is visible
 
 the current state of the stack view
 
+#### stackView.currentSection
+
+the current visible section
+
 ### Nested States
 
 Nesting states is pretty straight forward. All you need to do is set `states` to the
@@ -61,5 +65,4 @@ main.set("states", {
 
 console.log(main.get("state")); // auth
 console.log(main.get("sections.auth.state")); // login
-
 ```
