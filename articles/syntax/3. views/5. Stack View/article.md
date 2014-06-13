@@ -50,13 +50,14 @@ var AuthView = view.Stack.extend({
 });
 
 var MainView = view.Stack.extend({
+  name: "main",
   sections: {
     auth: AuthView,
     home: HomeView
   }
 });
 
-var main = new MainView({ name: "main" });
+var main = new MainView();
 
 main.set("states", {
   main: "auth",
