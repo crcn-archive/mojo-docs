@@ -16,7 +16,6 @@ The states for the stack view.
 
 Hash map for setting states. This is useful for nested stack views.
 
-
 ### Nested Stack Views
 
-As your application grows in complexity, you'll likely have nested stack views.
+As your application grows in complexity, you'll likely have nested stack views. You'll what to
