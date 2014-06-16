@@ -41,7 +41,7 @@ the current visible section
 ### Nested States
 
 Nesting states is pretty straight forward. All you need to do is set `states` to the
-`root` view, and those states will be propagated down to every sub-stack view.
+`root` view, and those states will be inherited by every sub-view.
 
 
 ```javascript

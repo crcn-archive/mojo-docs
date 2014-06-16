@@ -1,0 +1,4 @@
+The stack view is a container which has many children, of which only one is displayed at a time. Stack views
+are very when building single page applications that have navigation. Here's a basic example of using the stack view:
+
+{{ example: article.examples.simple }}

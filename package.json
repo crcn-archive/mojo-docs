@@ -11,9 +11,12 @@
     "url": "https://github.com/classdojo/mojo-docs.git"
   },
   "dependencies": {
-    "delicorice": "0.0.x",
+    "delicorice": "0.0.44",
     "bindable": "^0.5.37",
-    "mojojs": "^0.8.1"
+    "mojojs": "^0.8.1",
+    "mojo-views": "0.0.12",
+    "mojo-application": "0.0.8",
+    "mojo-bootstrap": "0.0.4"
   },
   "devDependencies": {
     "ditto": "0.0.11"
