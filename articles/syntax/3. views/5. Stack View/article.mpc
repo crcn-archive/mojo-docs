@@ -18,4 +18,6 @@ Hash map for setting states. This is useful for nested stack views.
 
 ### Nested Stack Views
 
-As your application grows in complexity, you'll likely have nested stack views. You'll what to
+As your application grows in complexity, you'll likely have nested stack views. Nested stack views are generally used along with some sort of HTTP router. Basically, the HTTP router sets a property *states* which is inherited by all sub-views. Here's a more complex example of how you might implemented nested stack views with an HTTP router.
+
+{{ example: article.examples.nested }}

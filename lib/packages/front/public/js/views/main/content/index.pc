@@ -1,5 +1,0 @@
-
-
-<div class="col-xs-9">
-  {{ html: sections.pages}}
-</div>

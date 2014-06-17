@@ -1,7 +1,0 @@
-<ul class="article-list">
-  {{ html: ~sections.articles }}
-</ul>
-
-{{#if:!sections.articles.length}} 
-  <div class="article-filter-no-results">No Results</div>
-{{/}}

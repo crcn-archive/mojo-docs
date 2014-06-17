@@ -14,9 +14,12 @@
     "delicorice": "0.0.44",
     "bindable": "^0.5.37",
     "mojojs": "^0.8.1",
-    "mojo-views": "0.0.12",
-    "mojo-application": "0.0.8",
-    "mojo-bootstrap": "0.0.4"
+    "mojo-views": "0.0.x",
+    "mojo-application": "0.0.x",
+    "mojo-bootstrap": "0.0.4",
+    "mojo-paperclip": "0.4.x",
+    "mojo-router": "^0.3.6",
+    "paperclip": "^0.3.131"
   },
   "devDependencies": {
     "ditto": "0.0.11"

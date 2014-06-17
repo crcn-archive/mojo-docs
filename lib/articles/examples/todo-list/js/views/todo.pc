@@ -1,8 +1,0 @@
-<li data-bind="{{
-    style: {
-      'text-decoration': model.complete ? 'line-through' : 'none'
-    }
-  }}">
-  <input type="checkbox" name="complete" data-bind="{{ model: model }}"></input> 
-  {{ model.text }}
-</li>

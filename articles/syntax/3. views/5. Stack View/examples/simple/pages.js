@@ -1,5 +1,13 @@
 var views = require("mojo-views");
 
+var HomeView = views.Base.extend({
+  paper: require("./home.pc")
+});
+
+var ContactView = views.Base.extend({
+  paper: require("./contact.pc")
+});
+
 module.exports = views.Stack.extend({
 
   // initial state
@@ -7,8 +15,8 @@ module.exports = views.Stack.extend({
 
   // individual states
   sections: {
-    home: require("./home"),
-    contact: require("./contact")
+    home: HomeView,
+    contact: ContactView
   },
 
   // called by each state
