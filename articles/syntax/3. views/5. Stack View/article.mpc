@@ -1,8 +1,6 @@
-The stack view is a container which has many children, of which only one is displayed at a time. Stack views
-are very useful when building single page applications that have navigation. Here's a basic stack view example:
-
-{{ example: article.examples.simple }}
-
+The stack view is a container with many children where only one is displayed at a time. Stack views
+are very useful when building Single Page Applications with navigation, and often times with an HTTP
+router, such as [mojo-router](http://github.com/classdojo/mojo-router).
 
 #### stackView.state
 
@@ -16,8 +14,17 @@ The states for the stack view.
 
 Hash map for setting states. This is useful for nested stack views.
 
-### Nested Stack Views
+### Basic Example
 
-As your application grows in complexity, you'll likely have nested stack views. Nested stack views are generally used along with some sort of HTTP router. Basically, the HTTP router sets a property *states* which is inherited by all sub-views. Here's a more complex example of how you might implemented nested stack views with an HTTP router.
+At the bare minimum, here's an example using 2 states that toggle between each other:
+
+{{ example: article.examples.simple }}
+
+### Nested Stack View Example
+
+
+Here's another example of where you might have nested stack views that are tied to some navigation
+structure. Remember that properties are inherited by parent views. The *states* property in this case
+is inherited by all sub stack views, and used to toggle the state of each nested structure. ch
 
 {{ example: article.examples.nested }}
