@@ -1,6 +1,6 @@
 Mojo Views are the C in [Model View Controller](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller). The View controller handles what the user sees, and any user
 interactions. For example, when a user clicks a button (view), the button click is handled by the view controller, which might invoke some sort of action on the application, such as
-a model, router, or command. Clicking an anchor link for instance gets sent to the view controller, which then interacts with the HTTP router to redirect to another application state.
+a `model`, `router`, or `command`. Clicking an anchor link for instance gets sent to the view controller, which then interacts with the HTTP router to redirect to another application state.
 
 The default view controller layer for Mojo is [mojo-views](https://github.com/classdojo/mojo-views). You can install it by plugging it into your main application, like so:
 
@@ -14,7 +14,7 @@ View controllers are entirely plugin-based, meaning you can customize their beha
 
 #### app.views.register(className, clazz)
 
-Registers a view controller class.
+Registers a view controller class. This makes it available anywhere in the application. See `sections decorator` for a use-case.
 
 - `className` - the class name to register
 - `clazz` - the view controller class

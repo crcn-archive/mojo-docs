@@ -1,0 +1,1 @@
+Widget Name:  <strong>{{ name }}</strong>

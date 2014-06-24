@@ -1,0 +1,2 @@
+Decorators drive the behavior of view controllers. You can think of them like `mixins`, or `plugins`. Mojo comes with a few built-in decorators to help you get started.
+
