@@ -1,0 +1,25 @@
+{{#if:loading}}
+  <div class="alert alert-info">
+    Loading...
+  </div>
+{{/elseif:error}}
+  <div class="alert alert-danger">
+    {{error.message}}
+  </div>
+{{/elseif: success}}
+  <div class="alert alert-success">
+    Successfuly logged in!
+  </div>
+{{/}}
+
+<form data-bind="{{ onSubmit: login() }}">
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="username" data-bind="{{ model: <~>username }}">
+    </input>
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="password" placeholder="password" data-bind="{{ model: <~>password }}">
+    </input>
+  </div>
+  <input class="form-control" type="submit" value="login"></input>
+</form>

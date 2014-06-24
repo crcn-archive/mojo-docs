@@ -1,3 +1,6 @@
 {
-  "main": "./article.md"
+  "main": "./article.mpc",
+  "examples": {
+    "vc": "./examples/vc/entry.js"
+  }
 }

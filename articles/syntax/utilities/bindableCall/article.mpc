@@ -1,0 +1,31 @@
+[bindableCall](https://github.com/classdojo/bindable-call) allows you to bind the response of asynchronous callbacks. It's useful especially with view controllers where you might execute a command, or function, and data-bind the result to the the view. 
+
+#### request bindableCall(fn, args...)
+
+makes a call, and returns the bindable request
+
+#### request.loading
+
+`true` if the async call is still running
+
+#### request.error
+
+set when the async call returns an error
+
+#### request.success
+
+`true` if the async call doesn't return an error
+
+#### request.result
+
+whatever the second parameter is returned by the async call
+
+#### request.response
+
+called if there is a result, or an error
+
+### View Controller Example
+
+{{ example: article.examples.vc }}
+
+
