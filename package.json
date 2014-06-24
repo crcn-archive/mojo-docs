@@ -20,7 +20,8 @@
     "mojo-paperclip": "0.4.x",
     "mojo-router": "0.3.x",
     "paperclip": "0.3.x",
-    "bindable-call": "^0.1.4"
+    "bindable-call": "^0.1.4",
+    "jsonstream": "0.0.1"
   },
   "devDependencies": {
     "ditto": "0.0.11"
