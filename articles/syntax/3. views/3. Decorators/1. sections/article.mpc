@@ -1,4 +1,5 @@
-Sections allow you to specify nested views. They make it easy to break your application views into smaller, more manageable chunks. 
+Sections allow you to specify nested views. They make it easy to break your application views into smaller, more manageable chunks.
+
 
 ### Basic Example
 
