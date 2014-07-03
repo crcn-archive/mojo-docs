@@ -4,6 +4,22 @@
 
 makes a call, and returns the bindable request
 
+```javascript
+var request = bindableCall(function (credentials, complete) {
+  // login
+}, { username: "user", password: "password" });
+
+// bind error property
+request.bind("error", function () {
+  
+});
+
+// bind result property - only called if there is a result
+request.bind("result", function () {
+  
+});
+```
+
 #### request.loading
 
 `true` if the async call is still running

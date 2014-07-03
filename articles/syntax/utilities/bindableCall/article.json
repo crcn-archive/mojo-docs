@@ -1,7 +1,8 @@
 {
+  "_id": "bindable-call",
   "main": "./article.mpc",
   "examples": {
-    "simple": "./examples/vc/entry.js"
+    "simple": "./examples/simple/entry.js"
   },
   "searchable": true
 }
