@@ -2,17 +2,90 @@ The stack view is a container with many children where only one is displayed at 
 are very useful when building Single Page Applications with navigation, and often times with an HTTP
 router, such as [mojo-router](http://github.com/classdojo/mojo-router).
 
-#### stackView.state
-
-The current state of the stack view.
 
 #### stackView.sections
 
 The states for the stack view.
 
+#### stackView.state
+
+The current state of the stack view.
+
+```javascript
+var HomeView = views.Stack.extend({
+  sections: {
+    dashboard: require("./dashboard"),
+    contact: require("./contact")
+  }
+});
+
+var homeView = new HomeView();
+homeView.set("state", "dashboard"); // home view is showing
+homeView.set("state", "contact"); // contact view is showing
+```
+
+Note that you can define the default state a number of ways. Here
+are some examples:
+
+```javascript
+var HomeView = views.Stack.extend({
+  state: "dashboard", // default state is home
+  sections: {
+    dashboard: require("./dashboard"),
+    contact: require("./contact")
+  }
+});
+
+new HomeView({ state: "contact" }); // set the state to contact
+```
+
 #### stackView.states
 
-Hash map for setting states. This is useful for nested stack views.
+Similar to the `state` property, but allows you to control multiple nested stack views. This property is usually
+controlled by some sort of router. Here's a simple example of how it works:
+
+```javascript
+var AuthView = views.Stack.extend({
+  name: "auth",
+  sections: {
+    login: require("./login"),
+    signup: require("./signup")
+  }
+});
+
+var HomeView = viwws.Stack.extend({
+  name: "home",
+  sections: {
+    dashboard: require("./dashboard"),
+    contact: require("./contact")
+  }
+});
+
+var MainView = views.Stack.extend({
+  name: "main",
+  sections: {
+    auth: AuthView,
+    home: HomeView
+  }
+});
+
+var main = new MainView();
+
+// show the auth page
+main.set("states", {
+  main: "auth",
+  auth: "login"
+});
+
+// show the contact page
+main.set("states", {
+  main: "home",
+  home: "contact"
+});
+```
+
+Note that `name` helps match each state. If `name` is omitted, it will be set as the `section name`.
+
 
 ### Basic Example
 

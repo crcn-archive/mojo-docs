@@ -1,4 +1,4 @@
-Base views control what the user sees & does. They have all the same methods as bindable objects. 
+Base views control what the user sees & does. They have all the same methods as bindable objects.
 
 #### views.Base(properties, application)
 
@@ -15,7 +15,7 @@ console.log(view.application); // application above
 
 The [section](https://github.com/classdojo/loaf.js) which gets displayed to the user. This is basically a document fragment.
 
-### view.application
+#### view.application
 
 The application
 

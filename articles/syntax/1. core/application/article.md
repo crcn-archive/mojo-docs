@@ -25,40 +25,6 @@ var app = new Application({ nodeFactory: nofactor["default"] });
 
 the [node factory](https://github.com/classdojo/nofactor.js) to use when creating elements. This allows us to run on multiple platforms.
 
-#### application.use(plugin)
-
-registers a plugin to the application.
-
-```javascript
-var Application = require("mojo-application");
-var app = new Application();
-
-// load in a third-party plugin
-app.use(require("mojo-views"));
-
-// or pass in a function
-app.use(function (app) {
-  // do stuff with the application
-});
-```
-
-#### application.registerPlugins()
-
-called immediately after the application is created. This is where you should register your plugins.
-
-```javascript
-// same as above, but much cleaner.
-var MyApplication = Application.extend({
-  registerPlugins: function () {
-    this.use(require("mojo-views"));
-    this.use(function (app) {
-      // do stuff with app
-    });
-  }
-});
-
-var app = new MyApplication();
-```
 
 #### application.plugins
 
@@ -82,9 +48,28 @@ var MyApplication = Application.extend({
 var app = new MyApplication();
 ```
 
+#### application.use(plugin)
+
+registers a plugin to the application.
+
+```javascript
+var Application = require("mojo-application");
+var app = new Application();
+
+// load in a third-party plugin
+app.use(require("mojo-views"));
+
+// or pass in a function
+app.use(function (app) {
+  // do stuff with the application
+});
+```
+
 #### application.initialize(options)
 
 Initializes the application. This is where you should pass-in your app config, including what element to attach to.
+
+Note that an exception will be thrown if initialize is called more than once.
 
 ```javascript
 var app = new MyApplication();
@@ -117,7 +102,6 @@ var MyApplication = Application.extend({
 var app = new MyApplication();
 app.initialize({ element: document.body });
 ```
-
 
 
 ### Events
