@@ -3,5 +3,6 @@
   "tags": ["bindable", "bind", "object"],
   "related": ["bindable-objects"],
   "category": "syntax",
-  "main": "./article.md"
+  "main": "./article.md",
+  "searchable": true
 }

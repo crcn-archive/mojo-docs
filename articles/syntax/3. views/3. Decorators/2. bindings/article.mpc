@@ -1,2 +1,5 @@
+Bindings allow you to easily transform (compute) properties on the view controller. 
 
-You can easily add your custom decorators to view controllers. See the view introduction for more info.
+Note that bindings are initialized immediately before rendering the view controller.
+
+

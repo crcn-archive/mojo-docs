@@ -1,3 +1,4 @@
 {
-  "main": "./article.mpc"
+  "main": "./article.mpc",
+  "related": ["bindable-objects"]
 }
