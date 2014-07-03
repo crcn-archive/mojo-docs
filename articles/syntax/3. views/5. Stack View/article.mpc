@@ -5,7 +5,7 @@ router, such as [mojo-router](http://github.com/classdojo/mojo-router).
 
 #### stackView.sections
 
-The states for the stack view.
+The states for the stack view. See below for usage.
 
 #### stackView.state
 
