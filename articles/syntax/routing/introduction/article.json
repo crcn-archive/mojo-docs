@@ -1,3 +1,4 @@
 {
-  "main": "./article.md"
+  "main": "./article.md",
+  "searchable": true
 }

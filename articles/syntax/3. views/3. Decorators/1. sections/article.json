@@ -3,5 +3,6 @@
   "examples": {
     "basic": "./examples/basic/entry.js",
     "registered": "./examples/registered/entry.js"
-  }
+  },
+  "searchable": true
 }

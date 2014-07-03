@@ -1,4 +1,5 @@
 {
   "main": "./article.mpc",
-  "related": ["bindable-objects"]
+  "related": ["bindable-objects"],
+  "searchable": true
 }

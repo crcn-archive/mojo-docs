@@ -2,5 +2,6 @@
   "main": "./article.mpc",
   "examples": {
     "basic": "./examples/basic/entry.js"
-  }
+  },
+  "searchable": true
 }

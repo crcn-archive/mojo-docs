@@ -1,3 +1,4 @@
 {
-  "main": "./article.mpc"
+  "main": "./article.mpc",
+  "searchable": true
 }

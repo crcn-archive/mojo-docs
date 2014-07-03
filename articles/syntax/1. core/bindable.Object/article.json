@@ -2,5 +2,6 @@
   "_id": "bindable-objects",
   "related": ["bindable-collections"],
   "category": "syntax",
-  "main": "./article.md"
+  "main": "./article.md",
+  "searchable": true
 }

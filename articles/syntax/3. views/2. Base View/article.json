@@ -1,4 +1,5 @@
 {
   "main": "./article.md",
-  "related": ["bindable-objects"]
+  "related": ["bindable-objects"],
+  "searchable": true
 }
