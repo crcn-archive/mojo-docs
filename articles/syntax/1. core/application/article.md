@@ -28,7 +28,7 @@ the [node factory](https://github.com/classdojo/nofactor.js) to use when creatin
 
 #### application.plugins
 
-Array of plugins to use in the application. Similar to `registerPlugins`.
+Array of plugins to use in the application.
 
 ```javascript
 var Application = require("mojo-application");
@@ -90,10 +90,10 @@ called immediately after initializing your application. Good place to start your
 
 ```javascript
 var MyApplication = Application.extend({
-  registerPlugins: function () {
-    this.use(require("mojo-views"));
-    this.use(require("./views"));
-  },
+  plugins: [
+    require("mojo-views"),
+    require("./views")
+  ],
   didInitialize: function (options) {
     options.element.appendChild(this.views.create("main").render());
   }
