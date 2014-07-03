@@ -9,7 +9,7 @@ The states for the stack view.
 
 #### stackView.state
 
-The current state of the stack view.
+The current state of the stack view. See below for usage.
 
 ```javascript
 var HomeView = views.Stack.extend({
