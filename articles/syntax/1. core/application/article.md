@@ -52,9 +52,31 @@ var MyApplication = Application.extend({
   registerPlugins: function () {
     this.use(require("mojo-views"));
     this.use(function (app) {
-
+      // do stuff with app
     });
   }
+});
+
+var app = new MyApplication();
+```
+
+#### application.plugins
+
+Array of plugins to use in the application. Similar to `registerPlugins`.
+
+```javascript
+var Application = require("mojo-application");
+
+var MyApplication = Application.extend({
+  plugins: [
+    require("mojo-router"),
+    require("mojo-models")
+    require("mojo-views"),
+    require("mojo-paperclip"),
+    require("./routes"),
+    require("./models"),
+    require("./views")
+  ]
 });
 
 var app = new MyApplication();
