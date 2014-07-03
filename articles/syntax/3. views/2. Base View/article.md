@@ -1,4 +1,6 @@
-Base views control what the user sees & does. They have all the same methods as bindable objects.
+Controls exactly what the user sees and does. View controllers are plugin-based - they don't come
+with any special features out of the box, such as `templates`. This allows you to fully customize
+exactly how view controllers behave. See `Decorators` to understand how to add / create plugins to views.
 
 #### views.Base(properties, application)
 
@@ -6,22 +8,23 @@ Base views control what the user sees & does. They have all the same methods as 
 - `application` - the application instance
 
 ```javascript
-var view = new views.Base({ name: "some-view" }, new Application());
-console.log(view.name); // some-view
-console.log(view.application); // application above
+var view = new views.Base();
+view.section.append(document.createTextNode("Hello World!"));
+document.body.append(view.render()); // displays 'Hello World!'
 ```
 
 #### view.section
 
-The [section](https://github.com/classdojo/loaf.js) which gets displayed to the user. This is basically a document fragment.
+The document fragment which gets displayed to the user. Sections are groups of elements which are kept track by the view
+controller. See [loaf](https://github.com/classdojo/loaf.js) for a better understanding of how this works.
 
 #### view.application
 
-The application
+The main application - This is usually set in the constructor.
 
-#### view.render()
+#### documentFragment view.render()
 
-renders the view
+renders the view, and returns a document fragment.
 
 ```javascript
 var view = new SomeView();
@@ -39,30 +42,6 @@ document.body.appendChild(view.render());
 view.remove(); // removes view from the document body
 ```
 
-#### view.didCreateSection()
-
-Called right after a section is created. Note that this method is called before `render()`, or any other view controller plugins.
-
-```javascript
-var views = require("mojo-views");
-
-var SomeView = views.Base.extend({
-
-  /**
-   */
-
-  didCreateSection: function () {
-    this.section.append(document.createTextNode("Hello World!"));
-  }
-});
-
-
-var view = new SomeView();
-
-// append the document fragment created by the sub view
-document.body.appendChild(view.render());
-```
-
 #### view.willRender()
 
 called right before `.render()` is called on a view. It's also called before any decorators are initialized such as `bindings`, `events`, and `templates`.
@@ -74,8 +53,6 @@ called right after `.render()` is called on the view.
 #### view.didRemove()
 
 called right after `.remove()` is called. At this point, the view is detached from the DOM, or parent elements.
-
-
 
 ### Events
 
