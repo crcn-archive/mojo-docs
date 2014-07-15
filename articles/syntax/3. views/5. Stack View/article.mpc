@@ -1,6 +1,6 @@
 The stack view is a container with many children where only one is displayed at a time. Stack views
 are very useful when building Single Page Applications with navigation, and often times with an HTTP
-router, such as [mojo-router](http://github.com/classdojo/mojo-router).
+router, such as [mojo-router](http://github.com/mojo-js/mojo-router).
 
 #### stackView.sections
 

@@ -1,4 +1,4 @@
-[mojo-application](https://github.com/classdojo/mojo-application) is your main entry point. It's not very complex - just some glue to help bootstrap
+[mojo-application](https://github.com/mojo-js/mojo-application) is your main entry point. It's not very complex - just some glue to help bootstrap
 your application.
 
 #### Application(options)
@@ -23,7 +23,7 @@ var app = new Application({ nodeFactory: nofactor["default"] });
 
 #### application.nodeFactory
 
-the [node factory](https://github.com/classdojo/nofactor.js) to use when creating elements. This allows us to run on multiple platforms.
+the [node factory](https://github.com/mojo-js/nofactor.js) to use when creating elements. This allows us to run on multiple platforms.
 
 
 #### application.plugins

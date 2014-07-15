@@ -6,4 +6,4 @@ The first thing before we start coding is take a top-level glance at what the ap
 
 We're not going to worry too much about the implementation at this point - let's just start scaffolding exactly what we see. We'll start by writing the HTML & CSS, and then breaking the HTML into smaller view components.
 
-First go ahead and download the [mojo starter kit](https://github.com/classdojo/mojo-starter/archive/master.zip). Next, open terminal, and run `npm install`. Finally, run `npm start`. You should see a little message in terminal that says "open http://localhost:8085". Go ahead and copy & paste that URL in your favorite browser. You should see the application running.
+First go ahead and download the [mojo starter kit](https://github.com/mojo-js/mojo-starter/archive/master.zip). Next, open terminal, and run `npm install`. Finally, run `npm start`. You should see a little message in terminal that says "open http://localhost:8085". Go ahead and copy & paste that URL in your favorite browser. You should see the application running.

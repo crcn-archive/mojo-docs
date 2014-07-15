@@ -16,7 +16,7 @@ document.body.append(view.render()); // displays 'Hello World!'
 #### view.section
 
 The document fragment which gets displayed to the user. Sections are groups of elements which are kept track by the view
-controller. See [loaf](https://github.com/classdojo/loaf.js) for a better understanding of how this works.
+controller. See [loaf](https://github.com/mojo-js/loaf.js) for a better understanding of how this works.
 
 #### view.application
 

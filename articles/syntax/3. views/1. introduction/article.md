@@ -3,7 +3,7 @@ interactions. For example, when a user clicks a button (view), the button click 
 a `model`, `router`, or `command`. Clicking an anchor link for instance gets sent to the view controller, which then interacts with the HTTP router to redirect to another application state.
 
 
-The default view controller layer for Mojo is [mojo-views](https://github.com/classdojo/mojo-views). You can install it by plugging it into your main application, like so:
+The default view controller layer for Mojo is [mojo-views](https://github.com/mojo-js/mojo-views). You can install it by plugging it into your main application, like so:
 
 ```javascript
 var Application = require("mojo-application");
