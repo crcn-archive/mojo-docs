@@ -1,4 +1,4 @@
-BindableObjects are used primarily to synchronize information between Models, Templates, and Views. 
+BindableObjects are used primarily to synchronize information between Models, Templates, and Views.
 
 Two-way data binding means linking properties of two separate objects - when one changes, the other will automatically update with that change.  It enables much easier interactions between data models and UIs, among other uses outside of MVC.
 
@@ -134,7 +134,7 @@ Bindable objects emit a few events:
 ```javascript
 var person = new bindable.Object({ firstName: "Jon", lastName: "Doe" });
 person.bind("firstName, lastName", function (firstName, lastName) {
-  
+
 }).now();
 ```
 
@@ -182,6 +182,14 @@ person.set("firstName", "liam"); // re-computes data-binding
 console.log(person.get("fullName")); // liam anderson
 
 ```
+
+#### binding.pause()
+
+pauses a binding, but still maintains its state
+
+#### binding.resume()
+
+resumes a binding after it's been paused
 
 #### binding.dispose()
 

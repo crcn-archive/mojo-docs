@@ -25,7 +25,6 @@ var app = new Application({ nodeFactory: nofactor["default"] });
 
 the [node factory](https://github.com/mojo-js/nofactor.js) to use when creating elements. This allows us to run on multiple platforms.
 
-
 #### application.plugins
 
 Array of plugins to use in the application.
@@ -102,7 +101,6 @@ var MyApplication = Application.extend({
 var app = new MyApplication();
 app.initialize({ element: document.body });
 ```
-
 
 ### Events
 

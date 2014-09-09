@@ -2,11 +2,7 @@ The stack view is a container with many children where only one is displayed at 
 are very useful when building Single Page Applications with navigation, and often times with an HTTP
 router, such as [mojo-router](http://github.com/mojo-js/mojo-router).
 
-#### stackView.sections
-
-The states for the stack view. See below for usage.
-
-#### stackView.state
+#### String stackView.state
 
 The current state of the stack view. See below for usage.
 
@@ -38,7 +34,7 @@ var HomeView = views.Stack.extend({
 new HomeView({ state: "contact" }); // set the state to contact
 ```
 
-#### stackView.states
+#### Object stackView.states
 
 Similar to the `state` property, but allows you to control multiple nested stack views. This property is usually
 controlled by some sort of router. Here's a simple example of how it works:
