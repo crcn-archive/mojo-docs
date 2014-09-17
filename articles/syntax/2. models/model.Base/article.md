@@ -109,15 +109,44 @@ console.log(u.fullName); // Jon Doe
 ## API
 
 
+### model.deserialize(data)
+
+```javascript
+
+```
+
+### model.serialize()
+
+alias to toJSON
+
 ## Virtuals
 
-Virtual properties allow you to define properties that are loaded on demand. This is especially
-useful when data-binding models to views. 
+Virtuals allow you to define properties that are loaded on demand
+
+```javascript
+var Person = models.Base.extend({
+  virtuals: {
+    friends: function (onLoad) {
+      this.models.create("friends", {
+        person: this
+      }).load(onLoad);
+    }
+  }
+});
+
+var p = new Person();
+
+console.log(p.get("friends")); // undefined
+
+// triggers virtual
+p.bind("friends", function () {
+  console.log(p.get("friends")); // friends collection
+});
+```
 
 ## Persistence
 
 Decorator that allows you to add persistence to models such as `load`, `save`, and `remove`.
-
 
 ### model.load(onLoad)
 
