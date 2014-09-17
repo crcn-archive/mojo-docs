@@ -4,11 +4,18 @@ Working with paperclip templates and mojo view controllers is pretty straight fo
 `views/hello.js`:
 
 ```javascript
-var mojo = require("mojojs");
+var views = require("mojo-views"),
+Application = require("mojo-application");
+
+var app = new Application({
+  plugins: [
+    views,
+    require("mojo-paperclip")
+  ]
+});
 
 var HelloView = mojo.View.extend({
-  paper: require("./hello.pc"),
-  name: "World"
+    paper: require("./hello.pc")
 });
 
 
@@ -44,8 +51,8 @@ var HelloView = mojo.View.extend({
 
 
 // create the view with the person model, and add to the DOM
-var v = new HelloView({ 
-  person: new bindable.Object({ name: "Jeff" }) 
+var v = new HelloView({
+  person: new bindable.Object({ name: "Jeff" })
 });
 
 $("#application").append(v.render());
