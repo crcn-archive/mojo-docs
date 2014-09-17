@@ -146,7 +146,7 @@ Binding helpers are especially useful for [paperclip components](https://github.
 
 The above example will apply a two-way data-binding to the `datePicker.currentDate` property and the `currentDate` property of the view controller.
 
-### Block Helpers
+### Built-in components
 
 #### {{ html: content }}
 
@@ -180,14 +180,14 @@ data-bind attributes are borrowed from [knockout.js](http://knockoutjs.com/). Th
 Input data-binding. [For example](http://jsfiddle.net/JTxdM/96/):
 
 ```html
-<input type="text" name="message" data-bind="{{ model: this }}"></input> {{ message }}
+<input type="text" name="message" data-bind={{ model: this }}></input> {{ message }}
 ```
 
 You can also reference `message` directly. [For example](http://jsfiddle.net/JTxdM/94/)
 
 
 ```html
-<input type="text" data-bind="{{ model: <~>message }}"></input> {{ message }}
+<input type="text" data-bind={{ model: <~>message }}></input> {{ message }}
 ```
 
 Notice the `<~>` operator. This tells paperclip to bind both ways. See [binding operators](#binding-operators).
@@ -213,7 +213,7 @@ Executed when an event is fired on the DOM element. Here are all the available e
 [Basic example](http://jsfiddle.net/JTxdM/77/):
 
 ```html
-<input type="text" data-bind="{{ model: <~>name, onEnter: sayHello() }}"></input>
+<input type="text" data-bind={{ model: <~>name, onEnter: sayHello() }}></input>
 ```
 
 
@@ -227,13 +227,13 @@ Toggles the display mode of a given element. This is similar to the `{{#if: expr
 Sets the css of a given element. [For example](http://jsfiddle.net/JTxdM/81/):
 
 ```html
-<strong data-bind="{{
+<strong data-bind={{
   css: {
       cool    : temp > 0,
       warm    : temp > 60,
       hot     : temp > 90
   }
-}}"> It's pretty warm! </strong>
+}}> It's pretty warm! </strong>
 ```
 
 #### {{ style: styles }}
@@ -241,14 +241,26 @@ Sets the css of a given element. [For example](http://jsfiddle.net/JTxdM/81/):
 Sets the style of a given element. [For example](http://jsfiddle.net/JTxdM/78/):
 
 ```
-<span data-bind="{{
+<span data-bind={{
   style: {
     color       : color,
     'font-size' : size
   }
-}}"> Hello World </span>
+}}> Hello World </span>
 ```
 
 #### {{ disable: bool }}
 
 Toggles the enabled state of an element.
+
+```
+<button data-bind={{ disable: !formIsValid }}>Sign Up</button>
+```
+
+#### {{ focus: bool }}
+
+Focuses cursor on an element.
+
+```
+<input data-bind={{ focus: true }}></input>
+```
