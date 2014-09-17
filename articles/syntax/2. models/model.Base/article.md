@@ -112,7 +112,34 @@ console.log(u.fullName); // Jon Doe
 ### model.deserialize(data)
 
 ```javascript
+var Person = models.Base.extend({
+  deserialize: function (data) {
+    return {
+      firstName: data.firstName,
+      lastName: data.lastName,
+      fullName: data.firstName + " " + data.lastName
+    }
+  }
+});
 
+var p = new Person({ data: { firstName: "Craig", lastName: "Condon" } });
+console.log(p.firstName); // Craig
+console.log(p.lastName); // Condon
+console.log(p.fullName); // Craig Condon
+
+
+var p2 = new Person({ firstName: "Craig", lastName: "Condon" });
+console.log(p2.firstName); // Craig
+console.log(p2.lastName); // Condon
+console.log(p2.fullName); // undefined
+
+// trigger deserialize
+p2.set("data", {
+  firstName: "Jon",
+  lastName: "Doe"
+});
+
+console.log(p2.fullName); // Craig Condon
 ```
 
 ### model.serialize()
