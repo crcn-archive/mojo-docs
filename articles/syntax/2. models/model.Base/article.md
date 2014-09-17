@@ -1,3 +1,6 @@
+Models, like views, are plugin-based, meaning you can customize how models behave based on the properties defined
+in the class. You can also create your own plugins for models. By default, `mojo-models` come with a few plugins: `persist`,
+`virtuals`, and `bindings`. Here's an basic example:
 
 ### Example
 
@@ -105,6 +108,17 @@ console.log(u.fullName); // Jon Doe
 
 ## API
 
+
+## Virtuals
+
+Virtual properties allow you to define properties that are loaded on demand. This is especially
+useful when data-binding models to views. 
+
+## Persistence
+
+Decorator that allows you to add persistence to models such as `load`, `save`, and `remove`.
+
+
 ### model.load(onLoad)
 
 loads the model. Note that `persist.load` must be defined.
@@ -116,7 +130,3 @@ saves the model. Note that `persist.save` must be defined.
 ### model.remove(onRemove)
 
 removes the model. Note that `persist.remove` must be defined.
-
-## Virtuals
-
-## Persistence
