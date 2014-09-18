@@ -1,6 +1,6 @@
 {
-  "_id": "bindable-objects",
-  "related": ["bindable-collections"],
+  "_id": "bindable-object",
+  "related": ["bindable-collection"],
   "category": "syntax",
   "main": "./article.md",
   "searchable": true

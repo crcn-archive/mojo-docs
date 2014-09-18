@@ -1,6 +1,8 @@
 [mojo-application](https://github.com/mojo-js/mojo-application) is your main entry point. It's not very complex - just some glue to help bootstrap
 your application.
 
+## Core API
+
 #### Application(options)
 
 - `options`
@@ -102,6 +104,13 @@ var app = new MyApplication();
 app.initialize({ element: document.body });
 ```
 
-### Events
+### Core Events
 
 - `initialize` - emitted when the application is initialized
+
+
+
+
+
+
+
