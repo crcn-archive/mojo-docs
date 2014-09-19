@@ -1,4 +1,0 @@
-<h3>Contacts over 30 years old:</h3>
-<ul>
-  {{ html: sections.people }}
-</ul> 

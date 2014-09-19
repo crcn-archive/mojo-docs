@@ -1,5 +1,0 @@
-Contact View
-
-<a href="#" data-bind="{{
-  onClick: setPageState('home')
-}}">home view</a>

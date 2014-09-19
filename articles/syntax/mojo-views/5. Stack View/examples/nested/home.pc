@@ -1,4 +1,0 @@
-Welcome Home! 
-
-<a data-href="contact">Contact</a> <br />
-<a data-href="logout">Logout</a>

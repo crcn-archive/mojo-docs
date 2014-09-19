@@ -1,6 +1,0 @@
-{
-  "main": "./article.md",
-  "_id": "models-collection",
-  "related": ["models-base", "bindable-collection"],
-  "searchable": true
-}

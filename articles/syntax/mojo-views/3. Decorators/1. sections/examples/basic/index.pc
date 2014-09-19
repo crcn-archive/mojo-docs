@@ -1,3 +1,0 @@
-{{ html: sections.header }}
-{{ html: sections.body }}
-{{ html: sections.footer }}

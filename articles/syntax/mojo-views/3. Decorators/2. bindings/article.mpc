@@ -1,5 +1,0 @@
-Bindings allow you to easily transform (compute) properties on the view controller. 
-
-Note that bindings are initialized immediately before rendering the view controller.
-
-

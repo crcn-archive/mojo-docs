@@ -1,3 +1,0 @@
-<li>
-  {{model.name}} - {{model.age}}
-</li>

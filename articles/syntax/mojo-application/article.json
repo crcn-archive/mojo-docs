@@ -1,5 +1,0 @@
-{
-  "main": "./article.md",
-  "searchable": true,
-  "inherits": "bindable-object"
-}
