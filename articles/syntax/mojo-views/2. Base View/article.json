@@ -1,0 +1,5 @@
+{
+  "main": "./article.md",
+  "related": ["bindable-objects", "view-decorators"],
+  "searchable": true
+}

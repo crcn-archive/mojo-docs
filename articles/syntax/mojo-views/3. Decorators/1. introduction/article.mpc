@@ -1,0 +1,11 @@
+View controllers are entirely decorator-based. Think of decorators like `plugins`, or `mixins`. Decorators allow you to customize exactly how you want view controllers to behave. Decorators by default include the `template engine` ([paperclip](https://github.com/mojo-js/paperclip.js)), `computed properties`, and `sections`.
+
+`Sections` allow you to easily define sub-components for your view controller. This is especially important when structuring your application to make sure that each view controller is independent from one another. 
+
+`Bindings` allow you to compute various properties which get assigned to the view controller. They're great for separating application logic from the view (or template) which gets displayed to the user.
+
+The template engine is also a decorator. This allows allowing you to choose what template engine suits your application needs best. 
+
+You can also create `custom` decorators for adding behaviors that don't exist within view controllers. 
+
+

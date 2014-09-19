@@ -1,0 +1,8 @@
+{
+  "title": "Paperclip Introduction",
+  "tags": ["paperclip", "introduction", "template"],
+  "related": ["paperclip-mojo-usage"],
+  "category": "templates",
+  "main": "./article.md",
+  "searchable": true
+}

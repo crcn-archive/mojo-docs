@@ -1,0 +1,8 @@
+{
+  "main": "./article.mpc",
+  "examples": {
+    "simple": "./examples/simple/entry.js",
+    "nested": "./examples/nested/entry.js"
+  },
+  "searchable": true
+}

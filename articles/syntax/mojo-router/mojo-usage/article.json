@@ -1,0 +1,18 @@
+{
+  "title": "Router Mojo Usage",
+  "_id": "router-mojo-usage",
+  "tags": [
+    "routing", 
+    "router", 
+    "introduction", 
+    "template", 
+    "enter", 
+    "exit", 
+    "query", 
+    "params", 
+    "redirect"
+  ],
+  "category": "routing",
+  "main": "./article.md",
+  "searchable": true
+}
